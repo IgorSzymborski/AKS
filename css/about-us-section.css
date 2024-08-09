@@ -1,0 +1,191 @@
+.section-about-us {
+  margin-bottom: 12.8rem;
+  padding: 0 9rem;
+  position: relative;
+}
+
+.about-text-box {
+  background-image: url(/img/SYGNET_NO_BG.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.about-text {
+  color: #cbcbcb;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+.about-text:not(:last-child) {
+  margin-bottom: 4.8rem;
+}
+
+.offer {
+  margin-top: 9.6rem;
+  font-size: 3.4rem;
+  font-weight: 600;
+  color: #e5e5e5;
+}
+
+.sports-list {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 9rem;
+  margin-bottom: 14rem;
+}
+
+.popup-descripion {
+  margin-top: 20rem;
+  background-color: rgba(16, 20, 21);
+  position: fixed;
+  width: 100%;
+  z-index: 390909090;
+  top: -23%;
+  left: 0;
+  right: 0;
+  bottom: -10%;
+  padding: 6.4rem 8rem 9.6rem 8rem;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  background-image: url(/img/SYGNET_NO_BG.png);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation: fadeIn 0.4s ease-out, scaleUp 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.popup-descripion-text {
+  font-size: 2rem;
+  margin-bottom: 6.4rem;
+  font-weight: 500;
+  color: #e5e5e5;
+}
+
+.sports-section-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  column-gap: 2rem;
+  list-style: none;
+  margin-bottom: 4.4rem;
+}
+
+.sports-section-item {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  opacity: 90%;
+  padding: 3.2rem;
+  border-radius: 4rem;
+  color: #030303;
+  background-color: #998100;
+  box-shadow: 0 0.5rem 1rem 0 hsla(0, 0%, 0%, 0.2);
+  background-image: url(../img/ZŁOTO_1.png);
+  margin-bottom: 4rem;
+  font-weight: 500;
+}
+
+.group-name {
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+.things-list {
+  list-style: none;
+  margin-bottom: 6.4rem;
+  color: #e5e5e5;
+}
+
+.things-item {
+  font-size: 2.2rem;
+  padding: 0.8rem 0;
+  color: #e5e5e5;
+}
+.things-item:last-child {
+  margin-bottom: 4.8rem;
+}
+
+.thing-name {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #e5e5e5;
+}
+
+.close-popup {
+  position: absolute;
+  right: 3%;
+  top: 3%;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 14rem;
+  overflow: hidden;
+}
+
+.gallery-img-box {
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.7s ease-in;
+}
+
+.gallery-img:hover {
+  transform: scale(1.1);
+}
+
+.test {
+  margin-bottom: 2.4rem;
+  margin-top: 20rem;
+}
+
+.popup-descripion-text:nth-child(11) {
+  padding: 0;
+  border: none;
+  margin-bottom: 2.2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.clear {
+  margin-bottom: 2.4rem;
+}
+
+/* .small-p {
+  padding-bottom: 15rem;
+  margin-bottom: 10rem;
+} */

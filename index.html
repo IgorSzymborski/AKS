@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/intro-section.css" />
+    <link rel="stylesheet" href="css/about-us-section.css" />
+    <link rel="stylesheet" href="css/trainers-section.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <script
+      src="https://kit.fontawesome.com/ba87c27212.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "FeDWEGQt-HwJAQweZ",
+        });
+      })();
+    </script>
+    <title>Akademia Kształcenia Sportowego</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header-logo-box">
+          <img
+            src="img/header-logo-gold.png"
+            alt="Logo klubu"
+            class="header-logo-img"
+          />
+        </div>
+
+        <div class="header-contact-box">
+          <p class="header-contact-detail">
+            <a href="tel: +48794002373" class="link">
+              <i class="fa-solid fa-phone contact-icon"></i>794-002-373</a
+            >
+          </p>
+          <p class="header-contact-detail">
+            <a href="mailto: stowarzyszenie.aks@gmail.com" class="link">
+              <i class="fa-solid fa-at contact-icon"></i
+              >stowarzyszenie.aks@gmail.com</a
+            >
+          </p>
+        </div>
+
+        <nav class="navigation">
+          <ul class="navigation-list">
+            <li class="navigation-list-item">
+              <a href="#" class="nav-link">O nas</a>
+            </li>
+            <li class="navigation-list-item">
+              <a href="#" class="nav-link">Grafik zajęć</a>
+            </li>
+            <li class="navigation-list-item">
+              <a href="#" class="nav-link">Dokumenty</a>
+            </li>
+            <li class="navigation-list-item">
+              <a href="#" class="nav-link">Cennik</a>
+            </li>
+            <li class="navigation-list-item">
+              <a href="#" class="nav-link btn">Kontakt</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section class="section-intro">
+          <div class="text-wrapper background">
+            <h1 class="h1">
+              Sukces to nie końcówka drogi, to ciągła podróż polegająca na
+              doskonaleniu.
+            </h1>
+            <p class="section-intro-text"></p>
+          </div>
+        </section>
+
+        <section class="section-about-us">
+          <h2 class="h2 m-clear">
+            Witamy w AKS - Akademii Kształcenia Sportowego!
+          </h2>
+
+          <div class="about-text-box">
+            <p class="about-text">
+              Jesteśmy klubem sportowym, stawiającym na rozwój fizyczny i ciągły
+              progres swoich zawodników niezależnie od uprawianej dyscypliny.
+              Zależy nam na połączeniu pasji do sportu z dobrą zabawą co w
+              rezultacie owocuje wynikiem sportowym, lub osiągnięciem
+              wyznaczonego celu treningowego.
+            </p>
+
+            <p class="about-text">
+              Zajęcia prowadzone są przez doświadczonych i utytułowanych
+              trenerów, którzy kładą duży nacisk na dobrą atmosferę w grupie,
+              rozwój fizyczny i mentalny.
+            </p>
+
+            <p class="about-text">
+              Dzięki zindywidualizowanemu podejściu każdy członek klubu ma
+              możliwość stać się sportowcem lub zadbać o swoją kondycje
+              fizyczną, niezależnie od wieku czy poziomu zaawansowania. W
+              Akademii Kształcenia Sportowego promujemy nie tylko umiejętności
+              sportowe, ale także wartości takie jak szacunek, determinacja i
+              samodyscyplina.
+            </p>
+
+            <p class="about-text offer">
+              Sprawdź ofertę klubu i wybierz dyscyplinę w której pomożemy Ci się
+              realizować.
+            </p>
+          </div>
+
+          <ul class="sports-list">
+            <li class="sports-list-item">
+              <button class="btn open-popup" data-btn="1">
+                Taekwondo Olimpijskie
+              </button>
+            </li>
+            <li class="sports-listt-item">
+              <button class="btn open-popup" data-btn="2">Pilates</button>
+            </li>
+            <li class="sports-list-item">
+              <button class="btn open-popup" data-btn="3">Kickboxing</button>
+            </li>
+            <li class="sports-list-item">
+              <button class="btn open-popup" data-btn="4">Gimnastyka</button>
+            </li>
+            <li class="sports-list-item">
+              <button class="btn open-popup" data-btn="5">Boks</button>
+            </li>
+          </ul>
+
+          <!-- POPUP START -->
+          <div class="popup-descripion hidden fade-out" data-popup="1">
+            <button class="btn close-popup" data-btn="1">X</button>
+            <h3 class="h3">Taekwondo Olimpijskie</h3>
+
+            <p class="popup-descripion-text">
+              Zajęcia taekwondo w klubie sportowym dla dzieci i młodzieży są
+              starannie zaplanowane, aby rozwijać umiejętności fizyczne,
+              umysłowe oraz społeczne uczestników. Oferujemy programy
+              dostosowane do różnych grup wiekowych i poziomów zaawansowania, co
+              pozwala każdemu dziecku i nastolatkowi znaleźć odpowiednią dla
+              siebie ścieżkę rozwoju.
+            </p>
+            <h4 class="h4">Co to za zajęcia?</h4>
+            <p class="popup-descripion-text">
+              Taekwondo to koreańska sztuka walki, która bazuje na nauce i
+              doskonaleniu technik kopnięć, uderzeń, bloków oraz form układów
+              ruchów też. poomsae. Zajęcia w naszym klubie łączą elementy
+              sportu, sztuki walki i wychowania, oferując wszechstronny rozwój
+              uczestników.
+            </p>
+            <h4 class="h4">Dla kogo są te zajęcia?</h4>
+            <p class="popup-descripion-text testt">
+              Zajęcia są podzielone na grupy wiekowe i poziomy zaawansowania:
+            </p>
+
+            <ul class="sports-section-list">
+              <li class="sports-section-item">
+                <span class="group-name">Dzieci grupa RYSIE (5-7 lat) </span>
+                Grupa początkująca, zajęcia w formie zabaw, które wprowadzają
+                podstawowe techniki taekwondo oraz rozwijają koordynację i
+                dyscyplinę.
+              </li>
+              <li class="sports-section-item">
+                <span class="group-name">
+                  Dzieci grupa GEPARDY (8-11 lat)
+                </span>
+                Grupa początkująca dla starszych dzieci, treningi które kładą
+                większy nacisk na techniki i formy, rozwijając technikę, siłę,
+                wytrzymałość oraz gibkość.
+              </li>
+              <li class="sports-section-item">
+                <span class="group-name"
+                  >Dzieci grupa zaawansowana TYGRYSY (8-12 lat)</span
+                >
+
+                Grupa przeznaczona dla osób z większym stażem treningowym w
+                młodym wieku, intensywniejsze treningi, które kładą większy
+                nacisk na techniki i formy, rozwijając siłę i wytrzymałość oraz
+                przygotowanie sportowe. .
+              </li>
+              <li class="sports-section-item">
+                <span class="group-name">Grupa zawodnicza (13+ lat)</span>
+
+                Zaawansowane treningi zgodnie z cyklem treningowym mające na
+                celu przygotowanie startowe zawodników do turniejów
+                ogólnopolskich oraz międzynarodowych. Osoby początkujące w
+                starszym wieku również znajdą swoje miejsce w tej grupie poprzez
+                zindywidualizowane podejście trenera.
+              </li>
+            </ul>
+            <h4 class="h4">Co wziąć na pierwsze zajęcia?</h4>
+
+            <ul class="things-list">
+              <li class="things-item">
+                <span class="thing-name">Strój:</span> Wygodną koszulkę oraz
+                spodenki sportowe.
+              </li>
+
+              <li class="things-item">
+                <span class="thing-name">Obuwie:</span>
+                Zajęcia odbywają się boso na specjalnej macie, można zabrać
+                klapki do przejścia z szatni do sali treningowej.
+              </li>
+
+              <li class="things-item">
+                <span class="thing-name">Woda:</span>
+                Butelka wody, aby utrzymać odpowiednie nawodnienie.
+              </li>
+            </ul>
+            <h4 class="h4">Gdzie odbywają się zajęcia?</h4>
+            <p class="popup-descripion-text clear">
+              Zajęcia odbywają się w sali treningowej naszego klubu sportowego,
+              która jest wyposażona w maty zapewniające bezpieczeństwo podczas
+              ćwiczeń. Klub znajduje się w dogodnej lokalizacji, na ul.
+              Jagiellońskiej 13 w Legionowie z miejscami parkingowymi dla
+              rodziców.
+            </p>
+            <p class="popup-descripion-text">
+              Zapraszamy do naszego klubu sportowego, gdzie każde dziecko i
+              młody człowiek znajdzie swoje miejsce i będzie miał szansę
+              rozwijać się w przyjaznym i wspierającym środowisku.
+            </p>
+          </div>
+
+          <!-- Drugi -->
+          <!-- Gitara -->
+          <div class="popup-descripion hidden" data-popup="2">
+            <button class="btn close-popup" data-btn="2">X</button>
+            <h3 class="h3">Pilates</h3>
+
+            <p class="popup-descripion-text">
+              Zapraszamy wszystkie kobiety do świata pilatesu – miejsca, gdzie
+              ruch staje się sztuką, a każdy trening to krok w stronę lepszego
+              samopoczucia i zdrowia. Niezależnie od Twojego wieku czy poziomu
+              zaawansowania, nasze zajęcia pilatesu pomogą Ci odkryć wewnętrzną
+              siłę i zyskać pewność siebie oraz kondycję fizyczną !
+            </p>
+            <h4 class="h4">Dlaczego warto wybrać pilates?</h4>
+
+            <p class="popup-descripion-text testt">
+              Pilates to nie tylko ćwiczenia – to styl życia. Dzięki regularnym
+              treningom:
+            </p>
+
+            <ul class="sports-section-list">
+              <li class="sports-section-item">
+                Wzmocnisz swoje ciało: Pilates koncentruje się na mięśniach
+                głębokich, co prowadzi do silnego i stabilnego korpusu.
+              </li>
+              <li class="sports-section-item">
+                Poprawisz elastyczność i postawę: Ćwiczenia pilatesu pomagają
+                zwiększyć zakres ruchu w stawach i wyrównać postawę ciała.
+              </li>
+              <li class="sports-section-item">
+                Znajdziesz wewnętrzny spokój: Świadome ruchy i techniki
+                oddechowe pomagają zredukować stres i napięcie.
+              </li>
+            </ul>
+            <h4 class="h4">Co zabrać na zajęcia?</h4>
+
+            <ul class="things-list">
+              <li class="things-item">
+                <span class="thing-name">Wygodny strój sportowy</span>
+                Elastyczny, przylegający do ciała.
+              </li>
+
+              <li class="things-item">
+                <span class="thing-name">Mata do ćwiczeń:</span>
+                Własna mata zapewni Ci większy komfort i higienę jeśli takiej
+                nie posiadasz, nie przejmuj się nasza sala jest wyposażona w
+                matę treningową.
+              </li>
+
+              <li class="things-item">
+                <span class="thing-name">Ręcznik:</span>
+                Do wytarcia potu lub jako dodatkowa warstwa na matę.
+              </li>
+              <li class="things-item">
+                <span class="thing-name">Woda:</span>
+                Aby utrzymać odpowiedni poziom nawodnienia.
+              </li>
+              <li class="things-item">
+                <span class="thing-name">Skarpetki antypoślizgowe:</span>
+                Zapewniające lepszą przyczepność na macie lub możesz trenować
+                boso.
+              </li>
+            </ul>
+            <h4 class="h4">Gdzie odbywają się zajęcia?</h4>
+            <p class="popup-descripion-text clear">
+              Zajęcia odbywają się w sali treningowej naszego klubu sportowego,
+              która jest wyposażona w maty zapewniające bezpieczeństwo podczas
+              ćwiczeń. Klub znajduje się w dogodnej lokalizacji, na
+              ul.Jagiellońskiej 13 w Legionowie z miejscami parkingowymi dla
+              klientów.
+            </p>
+            <p class="popup-descripion-text">
+              Zapraszamy do naszego klubu sportowego, gdzie każde dziecko i
+              młody człowiek znajdzie swoje miejsce i będzie miał szansę
+              rozwijać się w przyjaznym i wspierającym środowisku.
+            </p>
+          </div>
+
+          <!-- Trzeci -->
+
+          <!-- Gitara -->
+          <div class="popup-descripion hidden" data-popup="3">
+            <button class="btn close-popup" data-btn="3">X</button>
+            <h3 class="h3">Kickboxing</h3>
+
+            <p class="popup-descripion-text">
+              Zapraszamy na inspirujące i pełne energii zajęcia kickboxingu w
+              naszym klubie sportowym! Oferujemy programy dla dzieci, młodzieży
+              i dorosłych, prowadzone przez doświadczonych instruktorów, którzy
+              z pasją i zaangażowaniem pomogą Ci osiągnąć Twoje cele.
+              Niezależnie od Twojego wieku czy poziomu zaawansowania, nasze
+              zajęcia kickboxingu dostarczą Ci mnóstwo satysfakcji, poprawią
+              kondycję fizyczną i nauczą skutecznej samoobrony.
+            </p>
+            <h4 class="h4">Dla kogo są te zajęcia?</h4>
+
+            <ul class="sports-section-list">
+              <li class="sports-section-item">
+                <span class="group-name">Kickboxing dla dzieci (9-13lat) </span>
+                Nasze zajęcia kickboxingu to nie tylko świetna zabawa, ale także
+                doskonały sposób na wszechstronny rozwój fizyczny i emocjonalny
+                Twojego dziecka. Pod czujnym okiem doświadczonych instruktorów
+                dzieci uczą się podstawowych technik kickboxingu w bezpiecznej i
+                przyjaznej atmosferze pożytkując swoje pokłady energii.
+              </li>
+              <li class="sports-section-item">
+                <span class="group-name"
+                  >Kickboxing dla młodzieży i dorosłych (14+ lat)
+                </span>
+                Na tych zajęciach oferujemy bardziej zaawansowany program, który
+                łączy techniki kickboxingu z intensywnym treningiem kardio i
+                siłowym. Jeśli chcesz zadbać o swoją kondycję ciała i zaznać
+                adrenaliny to idealna grupa dla Ciebie.
+              </li>
+            </ul>
+            <h4 class="h4">Co zabrać na pierwsze zajęcia?</h4>
+
+            <ul class="things-list">
+              <li class="things-item">
+                <span class="thing-name">Wygodny strój sportowy</span>
+                Koszulka, spodenki lub legginsy.
+              </li>
+
+              <li class="things-item">
+                <span class="thing-name">Obuwie:</span>
+                Zajęcia odbywają się boso na specjalnej macie, ale można zabrać
+                klapki do przejścia z szatni na matę.
+              </li>
+
+              <li class="things-item">
+                <span class="thing-name">Rękawice do kickboxingu:</span>
+                Jeśli posiadasz własne, zabierz je na zajęcia. Jeśli nie,
+                posiadamy klubowe.
+              </li>
+              <li class="things-item">
+                <span class="thing-name">Woda:</span>
+                Ważne jest, aby być dobrze nawodnionym przed, w trakcie i po
+                zajęciach.
+              </li>
+              <li class="things-item">
+                <span class="thing-name">Ręcznik:</span>
+                Przydatny do wytarcia potu po intensywnym treningu.
+              </li>
+            </ul>
+            <h4 class="h4">Gdzie odbywają się zajęcia?</h4>
+            <p class="popup-descripion-text clear">
+              Zajęcia odbywają się w sali treningowej naszego klubu sportowego,
+              która jest wyposażona w maty zapewniające bezpieczeństwo podczas
+              ćwiczeń. Klub znajduje się w dogodnej lokalizacji, na
+              ul.Jagiellońskiej 13 w Legionowie z miejscami parkingowymi dla
+              klientów.
+            </p>
+            <p class="popup-descripion-text">
+              Zapraszamy do naszego klubu sportowego, gdzie każde dziecko i
+              młody człowiek znajdzie swoje miejsce i będzie miał szansę
+              rozwijać się w przyjaznym i wspierającym środowisku.
+            </p>
+          </div>
+
+          <!-- Czwarty -->
+
+          <!-- Gir -->
+          <div class="popup-descripion hidden" data-popup="4">
+            <button class="btn close-popup" data-btn="4">X</button>
+            <h3 class="h3">Gimnastyka</h3>
+
+            <p class="popup-descripion-text">
+              Zadbaj o zdrowy rozwój twojego dziecka z Gimnastyką!
+            </p>
+            <p class="popup-descripion-text">
+              Zapraszamy serdecznie do naszego klubu sportowego na zajęcia
+              gimnastyczne dedykowane dzieciom. Nasze zajęcia to doskonały
+              sposób na wszechstronny rozwój fizyczny, naukę prawidłowej postawy
+              oraz kształtowanie zdrowych nawyków od najmłodszych lat.
+            </p>
+            <h4 class="h4">Dlaczego Gimnastyka?</h4>
+            <p class="popup-descripion-text">
+              Gimnastyka to nie tylko sport, to również fundament zdrowego trybu
+              życia. Zajęcia gimnastyczne pomagają dzieciom w rozwijaniu
+              koordynacji ruchowej, elastyczności oraz siły mięśniowej.
+              Regularne ćwiczenia wpływają pozytywnie na prawidłowy rozwój ciała
+              i korygują wady postawy. Dodatkowo, gimnastyka uczy dzieci
+              dyscypliny, koncentracji oraz współpracy w grupie. Jest to sport
+              który jest fundamentem do wszystkich dyscyplin sportowych.
+            </p>
+            <h4 class="h4">Dla kogo są te zajęcia?</h4>
+            <p class="popup-descripion-text testt">
+              Zajęcia są podzielone na grupy wiekowe i poziomy zaawansowania:
+            </p>
+
+            <ul class="sports-section-list">
+              <li class="sports-section-item">
+                <span class="group-name"
+                  >Gimnastyka dla Przedszkolaków (5-6lat)
+                </span>
+                Celem tych zajęć jest wprowadzenie dzieci w świat ruchu poprzez
+                zabawę i proste ćwiczenia gimnastyczne. Korzyści: rozwój
+                motoryki, koordynacji i równowagi, nauka podstawowych elementów
+                gimnastycznych.
+              </li>
+              <li class="sports-section-item">
+                <span class="group-name">
+                  Gimnastyka dla Dzieci (7-10 lat)
+                </span>
+                Na tych zajęciach dzieci uczą się bardziej zaawansowanych
+                ćwiczeń gimnastycznych, które pomagają w rozwijaniu siły,
+                elastyczności i poprawnej postawy. Korzyści: rozwój siły
+                mięśniowej, poprawa elastyczności, nauka prawidłowej postawy
+                ciała.
+              </li>
+            </ul>
+            <h4 class="h4">Co wziąć na pierwsze zajęcia?</h4>
+
+            <ul class="things-list">
+              <li class="things-item">
+                <span class="thing-name">Wygodny strój sportowy:</span> Wygodną
+                koszulkę oraz spodenki sportowe.
+              </li>
+
+              <li class="things-item">
+                <span class="thing-name">Obuwie:</span>
+                Zajęcia odbywają się boso lub w skarpetkach antypoślizgowych na
+                specjalnej macie, ale można zabrać klapki do przejścia po
+                szatni.
+              </li>
+
+              <li class="things-item">
+                <span class="thing-name">Woda:</span>
+                Ważne jest, aby być dobrze nawodnionym przed, w trakcie i po
+                zajęciach.
+              </li>
+              <li class="things-item">
+                <span class="thing-name">Ręcznik:</span>
+                Przydatny do wytarcia potu.
+              </li>
+            </ul>
+            <h4 class="h4">Gdzie odbywają się zajęcia?</h4>
+            <p class="popup-descripion-text clear">
+              Zajęcia odbywają się w sali treningowej naszego klubu sportowego,
+              która jest wyposażona w maty zapewniające bezpieczeństwo podczas
+              ćwiczeń. Klub znajduje się w dogodnej lokalizacji, na
+              ul.Jagiellońskiej 13 w Legionowie z miejscami parkingowymi dla
+              klientów.
+            </p>
+            <p class="popup-descripion-text">
+              Nie zwlekaj i zapisz swoje dziecko na zajęcia gimnastyczne już
+              dziś! Pomóż mu rozwijać zdrowe nawyki, prawidłową postawę i pasję
+              do ruchu.
+            </p>
+          </div>
+
+          <!-- Piąty -->
+
+          <div class="popup-descripion hidden" data-popup="5">
+            <button class="btn close-popup" data-btn="5">X</button>
+            <h3 class="h3">Boks</h3>
+
+            <p class="popup-descripion-text">
+              Zapraszamy serdecznie do naszego klubu sportowego, gdzie każdy,
+              niezależnie od wieku, znajdzie coś dla siebie! Oferujemy zajęcia
+              bokserskie dla dzieci, młodzieży i dorosłych, prowadzone przez
+              doświadczonego trenera w przyjaznej i motywującej atmosferze.
+              Dołącz do nas i rozwijaj swoje umiejętności bokserskie, kondycję
+              oraz pewność siebie dodatkowo świetnie się bawiąc !
+            </p>
+            <h4 class="h4">Dla kogo są te zajęcia?</h4>
+
+            <ul class="sports-section-list">
+              <li class="sports-section-item">
+                <span class="group-name"
+                  >Dla Dzieci i Młodzieży (9-13lat)
+                </span>
+                Nasze zajęcia bokserskie to nie tylko nauka podstawowych technik
+                bokserskich, ale również wspaniała okazja do rozwijania
+                koordynacji, dyscypliny i pracy zespołowej. Poprzez gry i
+                zabawy, dzieci uczą się podstaw boksu w bezpieczny i przyjazny
+                sposób. Zajęcia te pomagają w budowaniu pewności siebie, nauki
+                umiejętności dążenia do celu i zdrowych nawyków na całe życie.
+              </li>
+              <li class="sports-section-item">
+                <span class="group-name"
+                  >Dla Młodzieży i Dorosłych (14+lat)
+                </span>
+                Zajęcia dla młodzieży i dorosłych to intensywniejszy program,
+                który łączy treningi techniczne, kondycyjne oraz mentalne.
+                Przygotowaliśmy zajęcia, które pomogą w poprawie kondycji,
+                redukcji stresu i rozwijaniu umiejętności technik pięściarstwa.
+                Bez względu na poziom zaawansowania, nasze zajęcia są
+                dostosowane do Twoich potrzeb i możliwości.
+              </li>
+            </ul>
+            <h4 class="h4">Co zabrać na pierwsze zajęcia?</h4>
+
+            <ul class="things-list">
+              <li class="things-item">
+                <span class="thing-name">Wygodny strój sportowy</span>
+                Koszulka, spodenki lub legginsy.
+              </li>
+
+              <li class="things-item">
+                <span class="thing-name">Obuwie:</span>
+                Przed wejściem na matę należy zmienić obuwie na czyste,
+                przeznaczone wyłącznie do użytku wewnętrznego najlepiej z białą
+                lub jasną podeszwą.
+              </li>
+
+              <li class="things-item">
+                <span class="thing-name">Rękawice do boksu:</span>
+                Jeśli posiadasz własne, zabierz je na zajęcia. Jeśli nie,
+                posiadamy klubowe.
+              </li>
+              <li class="things-item">
+                <span class="thing-name">Woda:</span>
+                Ważne jest, aby być dobrze nawodnionym przed, w trakcie i po
+                zajęciach.
+              </li>
+              <li class="things-item">
+                <span class="thing-name">Ręcznik:</span>
+                Przydatny do wytarcia potu po intensywnym treningu.
+              </li>
+            </ul>
+            <h4 class="h4">Gdzie odbywają się zajęcia?</h4>
+            <p class="popup-descripion-text clear">
+              Zajęcia odbywają się w sali treningowej naszego klubu sportowego,
+              która jest wyposażona w maty zapewniające bezpieczeństwo podczas
+              ćwiczeń. Klub znajduje się w dogodnej lokalizacji, na
+              ul.Jagiellońskiej 13 w Legionowie z miejscami parkingowymi dla
+              klientów. Nie czekaj! Dołącz do nas już dziś i odkryj pasję do
+              boksu, która może stać się Twoim nowym sposobem na życie. Zapisz
+              się na zajęcia i zacznij swoją przygodę z boksem w naszym klubie
+              sportowym!
+            </p>
+            <p class="popup-descripion-text clear">
+              Nie czekaj! Dołącz do nas już dziś i odkryj pasję do boksu, która
+              może stać się Twoim nowym sposobem na życie. Zapisz się na zajęcia
+              i zacznij swoją przygodę z boksem w naszym klubie sportowym!
+            </p>
+          </div>
+
+          <h2 class="h2">Dołącz do nas!</h2>
+          <div class="gallery">
+            <div class="gallery-img-box">
+              <img src="img/gallery1.JPG" alt="" class="gallery-img" />
+            </div>
+            <div class="gallery-img-box">
+              <img src="img/gallery2.JPG" alt="" class="gallery-img" />
+            </div>
+            <div class="gallery-img-box">
+              <img src="img/gallery3.JPG" alt="" class="gallery-img" />
+            </div>
+            <div class="gallery-img-box">
+              <img src="img/gallery4.JPG" alt="" class="gallery-img" />
+            </div>
+            <div class="gallery-img-box">
+              <img src="img/gallery5.JPG" alt="" class="gallery-img" />
+            </div>
+            <div class="gallery-img-box">
+              <img src="img/gallery6.JPG" alt="" class="gallery-img" />
+            </div>
+          </div>
+        </section>
+
+        <section class="trainers-section">
+          <h2 class="h2">Kadra trenerska</h2>
+          <div class="trainers-wrapper">
+            <div class="trainers-wrapper-img">
+              <img src="img/Karol.jpg" alt="" class="trainers-img" />
+            </div>
+
+            <div class="trainers-description-box">
+              <h3 class="h3 dark">Trener Karol</h3>
+              <p class="trainers-description">
+                Absolwent Akademii Wychowania Fizycznego w Warszawie na kierunku
+                wychowanie fizyczne, trener taekwondo oraz kickboxingu dla
+                dzieci. Wybitny specjalista z wieloletnim doświadczeniem zarówno
+                jako zawodnik, jak i trener. Jego kariera sportowa obejmuje 14
+                lat intensywnych treningów w kadrze narodowej oraz udziału w
+                licznych zawodach na szczeblu krajowym i międzynarodowym. Zdobył
+                wiele medali, w tym 12 razy tytuł Mistrza Polski oraz 2 razy
+                tytuł Mistrza Europy co świadczy o jego wyjątkowych
+                umiejętnościach i determinacji w dążeniu do celu.
+                <span class="break"></span>
+                Aktualnie, jako trener, z powodzeniem dzieli się swoją pasją i
+                doświadczeniem z zawodnikami na różnych poziomach zaawansowania.
+                Posiada stopień mistrzowski 3 dan (czarny pas) w taekwondo
+                olimpijskim oraz regularnie uczestniczy w kursach
+                doszkalających. Jego profesjonalizm, zaangażowanie oraz
+                umiejętność motywowania sprawiają, że treningi są efektywne i
+                przynoszą satysfakcję każdemu uczestnikowi. Dzięki jego opiece,
+                wielu młodych zawodników osiąga sukcesy na arenie sportowej, a
+                atmosfera w klubie sprzyja rozwojowi osobistemu i sportowemu
+                każdego uczestnika.
+              </p>
+            </div>
+          </div>
+
+          <div class="trainers-wrapper">
+            <div class="trainers-description-box">
+              <h3 class="h3 dark">Trenerka Ola</h3>
+              <p class="trainers-description">
+                Absolwentka Akademii Wychowania Fizycznego w Warszawie na
+                kierunku wychowanie fizyczne. Trenerka pilatesu dla kobiet oraz
+                gimnastyki dla dzieci w naszym klubie sportowym to wszechstronna
+                specjalistka z wyjątkowym doświadczeniem. Jej kariera sportowa
+                rozpoczęła się od pływania, które trenowała przez wiele lat na
+                wysokim poziomie, zdobywając liczne wyróżnienia i osiągnięcia.
+                Przez 8 lat pracowała jako instruktor pływania, zdobywając
+                głęboką wiedzę na temat treningu fizycznego oraz kształtowania
+                zdrowych nawyków. <span class="break"></span>Po zakończeniu
+                kariery pływackiej, trenerka skoncentrowała się na innych
+                formach aktywności fizycznej, zdobywając certyfikaty i
+                kwalifikacje w dziedzinie pilatesu oraz gimnastyki. Jej
+                doświadczenie pozwala na unikalne podejście do treningów,
+                łączące elementy siły, wytrzymałości i gibkości ciała. Trenerka
+                jest znana z ciepłego i empatycznego podejścia, co sprawia, że
+                zarówno kobiety, jak i dzieci chętnie uczestniczą w jej
+                zajęciach. Jej zaangażowanie, kreatywność oraz umiejętność
+                motywowania podopiecznych czynią ją niezwykle cenioną członkinią
+                zespołu naszego klubu sportowego.
+              </p>
+            </div>
+            <div class="trainers-wrapper-img">
+              <img src="img/Ola.jpg" alt="" class="trainers-img" />
+            </div>
+          </div>
+        </section>
+
+        <section class="section-contact">
+          <h3 class="h3">Zapraszamy do kontaktu</h3>
+          <div class="form-box">
+            <form action="" class="form">
+              <label for="name" class="label">Imię</label>
+              <input
+                type="text"
+                placeholder="Podaj swoje imię"
+                id="name"
+                class="input"
+              />
+              <label for="email" class="label">Adres e-mail</label>
+              <input
+                type="text"
+                placeholder="jan@gmail.com"
+                id="email"
+                class="input"
+              />
+              <label for="text-content" class="label">Treść wiadomości</label>
+              <textarea
+                name=""
+                id="textcontent"
+                cols="55"
+                rows="14"
+                class="textArea"
+              ></textarea>
+
+              <button class="form-button btn">Wyślij</button>
+            </form>
+            <div id="map"></div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="left-footer">
+          <div class="footer-logo-box">
+            <img
+              src="img/FULL_NAME_BLACK_NO_BG.png"
+              alt=""
+              class="footer-logo"
+            />
+          </div>
+          <div class="social-box">
+            <a href="#" class="social-link"
+              ><i class="fa-brands fa-square-facebook facebook-logo"></i
+            ></a>
+            <a href="#" class="social-link instagram-logo"
+              ><i class="fa-brands fa-square-instagram instagram-logo"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="center-footer">
+          <ul class="address-list">
+            <li class="address-item">ul. Jagielońska 13</li>
+            <li class="address-item">05-120 Legionowo</li>
+            <li class="address-item">tel. 794-002-373</li>
+            <li class="address-item">stowarzyszenie.aks@gmail.com</li>
+            <li class="address-item">NIP 5361980198</li>
+            <li class="address-item">REGON 528637220</li>
+          </ul>
+        </div>
+
+        <div class="right-footer">
+          <ul class="footer-link-list">
+            <li class="footer-link-item">
+              <a href="" class="footer-link">O nas</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="" class="footer-link">Grafik zajęć</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="" class="footer-link">Dokumenty</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="" class="footer-link">Kontakt</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="" class="footer-link">Cennik</a>
+            </li>
+          </ul>
+
+          <div class="partners-box">
+            <ul class="partners-list">
+              <li class="partners-item">
+                <img src="img/logo-zwiazek2.png" alt="" class="partner-logo" />
+                <p class="partner-logo-text">
+                  Polski zwiazek <br />
+                  taekwondo olimpijskiego
+                </p>
+              </li>
+              <li class="partners-item">
+                <img
+                  src="img/Herb-legionowo1.png"
+                  alt=""
+                  class="partner-logo"
+                />
+                <p class="partner-logo-text">
+                  Miasto <br />
+                  Legionowo
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

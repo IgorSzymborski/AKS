@@ -331,7 +331,7 @@
     font-size: 45%;
   }
 
-  .h1 {
+  /* .h1 {
     font-size: 2.6rem;
     width: 100%;
     font-weight: 600;
@@ -349,7 +349,7 @@
 
   .h4 {
     font-size: 1.8rem;
-  }
+  } */
 
   .header {
     padding: 3.2rem 1.6rem;
@@ -388,12 +388,12 @@
   }
 
   .about-text {
-    font-size: 1.8rem;
+    /* font-size: 1.8rem; */
     margin-bottom: 1.6rem;
   }
 
   .offer {
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
 
   .text-wrapper {
@@ -412,7 +412,7 @@
   }
 
   .trainers-description {
-    font-size: 1.8rem;
+    /* font-size: 1.8rem; */
     line-height: 1;
   }
 

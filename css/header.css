@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3.2rem 9rem;
+  padding: 3.2rem 4.8rem;
   margin-bottom: 3.2rem;
 }
 
@@ -25,24 +25,27 @@
 
 .header-contact-detail {
   font-size: 1.8rem;
-  transition: all 0.3s;
 }
 
-.link:visited,
-.link:link {
+.contactLink:visited,
+.contactLink:link {
   color: #e5e5e5;
   text-decoration: none;
   font-weight: 600;
   text-transform: uppercase;
   display: inline-block;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   backface-visibility: hidden;
   will-change: transform;
 }
 
-.link:hover {
+.contactLink:hover {
   transform: scale(1.1) translateY(-4px);
 }
+
+/* .link:hover {
+  transform: scale(1.1) translateY(-4px);
+} */
 
 .contact-icon {
   margin-right: 0.8rem;
@@ -52,7 +55,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 3.2rem;
+  gap: 2.4rem;
   list-style: none;
 }
 

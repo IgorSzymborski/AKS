@@ -1,7 +1,6 @@
 .section-contact {
   margin: 12.8rem 0;
-  padding: 0 9rem;
-  /* padding: 2.4rem 9.6rem; */
+  padding: 0 4.8rem;
 }
 
 .form-box {
@@ -23,7 +22,6 @@
   background-position: center;
   color: #e5e5e5;
   height: 65rem;
-  /* overflow: hidden; */
 }
 
 .label {

@@ -179,6 +179,12 @@
   margin-bottom: 2.2rem;
 }
 
+.open-popup {
+  background-color: #998100;
+  background-image: url(../img/ZŁOTO_1.png);
+  color: white !important;
+}
+
 .hidden {
   display: none;
 }
@@ -186,8 +192,3 @@
 .clear {
   margin-bottom: 2.4rem;
 }
-
-/* .small-p {
-  padding-bottom: 15rem;
-  margin-bottom: 10rem;
-} */

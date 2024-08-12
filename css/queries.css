@@ -321,3 +321,46 @@
     width: 100%;
   }
 }
+
+@media (max-width: 38em) {
+  html {
+    font-size: 30%;
+  }
+
+  .h1 {
+    font-size: 3rem;
+  }
+
+  .h2 {
+    font-size: 2.4rem;
+  }
+
+  .h3 {
+    font-size: 2rem;
+  }
+
+  .h4 {
+    font-size: 1.8rem;
+  }
+
+  .about-text {
+    font-size: 1.6rem;
+  }
+
+  .text-wrapper {
+    min-height: 10vh;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .trainers-img {
+    width: 100%;
+  }
+
+  .trainers-description {
+    font-size: 1.6rem;
+  }
+}

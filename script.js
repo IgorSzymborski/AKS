@@ -4,6 +4,9 @@ const closePopupBtns = document.querySelectorAll(".close-popup");
 const sendFormBtn = document.querySelector(".form-button");
 const popups = document.querySelectorAll(".popup-descripion");
 const maps = document.querySelector(".map");
+const nav = document.querySelector(".navigation");
+
+console.log(nav);
 
 const togglePopup = (button) => {
   popups.forEach((popup) => {
@@ -54,3 +57,11 @@ const sendMail = () => {
 };
 
 sendFormBtn.addEventListener("click", sendMail);
+
+const hamburgerButton = document.getElementById("hamburger-button");
+
+hamburgerButton.addEventListener("click", () => {
+  hamburgerButton.classList.toggle("active");
+
+  nav.classList.toggle("hiddenn");
+});

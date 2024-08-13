@@ -1,81 +1,29 @@
-@media (max-width: 94em) {
+/* 1520 */
+@media (max-width: 96em) {
   html {
-    font-size: 58%;
+    font-size: 55%;
   }
 
-  .header {
-    padding: 3.2rem 3.2rem;
-  }
-
-  .header-contact-box {
-    margin-left: 2.2rem;
-  }
-
-  .navigation-list {
-    gap: 1.6rem;
-  }
-
-  .text-wrapper {
-    min-height: 40vh;
-  }
-
-  .section-intro {
-    padding: 0 3.2rem;
-    margin-bottom: 9.6rem;
-  }
-
-  .h1 {
-    font-size: 4.4rem;
-  }
-
-  .h3 {
-    margin-bottom: 0;
-  }
-
-  .contactLink:hover {
-    transform: scale(1.02) translateY(-4px);
-  }
-
-  .nav-link:hover {
-    transform: scale(1.1);
-  }
-
-  .section-about-us {
-    margin-bottom: 9.6rem;
-    padding: 0 3.2rem;
-  }
-
-  .trainers-section {
-    margin-bottom: 9.6rem;
-    padding: 0 3.2rem;
-  }
-
-  .trainers-description-box {
-    padding: 1rem;
-  }
-
-  .trainers-description {
-    padding: 4rem;
-  }
-
-  .break {
-    margin-bottom: 2.4rem;
-  }
-
-  .trainers-img {
-    height: 100%;
-  }
-
-  .section-contact {
-    padding: 0 3.2rem;
-  }
-
-  .footer-link-list {
-    font-size: 1.6rem;
+  .popup-descripion {
+    top: -20%;
   }
 }
 
-@media (max-width: 83em) {
+/* 1440 */
+@media (max-width: 90em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* 1351 */
+@media (max-width: 85em) {
+  html {
+    font-size: 50%;
+  }
+}
+/* 1264 */
+@media (max-width: 79em) {
   html {
     font-size: 45%;
   }
@@ -83,57 +31,39 @@
   .header-contact-detail {
     font-size: 2rem;
   }
-
   .nav-link:visited,
   .nav-link:link {
     font-size: 1.8rem;
   }
+}
+
+/* 1120 */
+@media (max-width: 70em) {
+  html {
+    font-size: 40%;
+  }
 
   .text-wrapper {
-    min-height: 30vh;
-  }
-
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 2rem;
-    margin-bottom: 14rem;
-    overflow: hidden;
-  }
-
-  .trainers-description {
-    font-size: 2rem;
-    line-height: 1;
-    padding: 1.6rem;
-    font-weight: 550;
+    min-height: 25vh;
   }
 
   .h1 {
-    padding: 8rem;
+    padding: 1rem;
   }
 
-  .h3 {
-    padding: 1rem;
+  .popup-descripion {
+    top: -15%;
   }
 }
 
-@media (max-width: 64em) {
+/* 1000 */
+@media (max-width: 62.5em) {
   html {
-    font-size: 45%;
+    font-size: 40%;
   }
 
-  .h1 {
-    font-size: 4.2rem;
-  }
-
-  .h2 {
-    font-size: 3.6rem;
-  }
-
-  .h3 {
-    font-size: 3rem;
-    margin-bottom: 0;
+  .hamburger {
+    display: flex;
   }
 
   .header-contact-box {
@@ -142,80 +72,103 @@
 
   .navigation {
     display: none;
+    flex-direction: column;
+    position: fixed;
+    background-color: #101415;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 20;
+  }
+
+  .hiddenn {
+    display: flex;
+  }
+
+  .navigation-list {
+    flex-direction: column;
+
+    justify-content: center;
+    font-size: 3.6rem;
+    gap: 8rem;
+    height: 100vh;
+  }
+
+  .nav-link:visited,
+  .nav-link:link {
+    font-size: 3.2rem;
   }
 
   .sports-list {
-    margin-bottom: 9rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 6.4rem;
+  }
+
+  .trainers-description {
+    font-size: 1.9rem;
+    padding: 2.4rem 0;
+    line-height: 1;
+  
+  }
+}
+
+/* 864 */
+@media (max-width: 54em) {
+  html {
+    font-size: 35%;
   }
 
   .sports-list-item {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 50%;
   }
 
   .open-popup {
-    width: 300px;
-    padding: 2rem;
-    /* font-size: 2.5rem; */
+    width: 100%;
+    font-size: 2.4rem;
   }
 
-  .gallery {
-    margin-bottom: 6.4rem;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+  .h1 {
+    font-size: 4.4rem;
+  }
+
+  .text-wrapper {
+    min-height: 20vh;
   }
 
   .trainers-wrapper {
-    display: flex;
-
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 0;
-    padding: 0;
-    border-radius: 0 0 2rem 2rem;
+    border-radius: 0 0 4.5rem 4.5rem;
   }
 
   .trainers-wrapper-img {
     width: 100%;
-    font-size: 1.6rem;
-
-    display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  .trainers-description-box {
-    width: 100%;
-    padding: 2.4rem;
-  }
-  .trainers-description {
-    padding: 1.2rem 0rem;
-
-    font-size: 2.4rem;
-    line-height: 1.2;
+    border-radius: 0 0 4.5rem 4.5rem;
   }
 
   .trainers-img {
-    width: 80%;
-    border-radius: 0 0 2rem 2rem;
-    border-bottom: 3px solid #998100;
-    border-right: 3px solid #998100;
-    border-left: 3px solid #998100;
+    width: 100%;
+    border-radius: 2.4rem 0;
+    /* border: 3px solid #998100; */
+    border-radius: 0 0 4.5rem 4.5rem;
   }
 
-  .section-contact {
-    margin: 12.8rem 0;
-    padding: 0 3.2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  .trainers-description-box {
+    width: 80%;
+    padding: 2.4rem 0;
+  }
+
+  .trainers-description {
+    padding: 2.4rem 0;
+    font-size: 2.4rem;
   }
 
   .form-box {
@@ -229,7 +182,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-size: 80%;
+    background-size: 70%;
 
     background-repeat: no-repeat;
   }
@@ -239,12 +192,12 @@
   }
 
   .input {
-    width: 50%;
+    width: 30%;
     align-self: flex-start;
   }
 
   .textArea {
-    width: 80%;
+    width: 100%;
     align-self: flex-start;
   }
 
@@ -253,216 +206,100 @@
   }
 
   #map {
-    width: 90vw;
+    width: 95vw;
     height: 50rem;
   }
 
   .footer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 3rem;
-    align-content: first baseline;
-    margin-bottom: 0rem;
-  }
-
-  .right-footer {
-    width: 100%;
-    grid-row-start: 2;
-    grid-area: 1 / 1 / 3 / 3;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 4.8rem;
+    justify-content: center;
+    gap: 8rem;
   }
 
   .left-footer,
-  .center-footer {
+  .center-footer,
+  .right-footer {
     width: 100%;
-    padding: 0;
     align-items: center;
-    justify-content: center;
+  }
+
+  .address-list {
+    width: 100%;
+    align-items: center;
+    text-align: left;
+  }
+
+  .address-item,
+  .footer-link-item {
+    font-size: 2.2rem;
+    padding: 1rem;
+    text-align: left;
   }
 
   .footer-logo-box {
-    width: 100%;
-    padding-bottom: 3rem;
     display: flex;
+    align-items: center;
     justify-content: center;
   }
 
   .footer-logo {
-    width: 50%;
-    align-items: center;
-  }
-
-  .address-item {
-    font-size: 2.2rem;
-  }
-
-  .footer-link-item {
-    font-size: 2.2rem;
+    width: 30%;
   }
 
   .social-link {
-    font-size: 4rem;
+    font-size: 4.4rem;
+    color: #101415;
+    margin-left: 1rem;
   }
 }
 
-@media (max-width: 64em) {
+/* 500 */
+@media (max-width: 31.25em) {
   html {
-    font-size: 40%;
+    font-size: 35%;
   }
 
-  .text-wrapper {
-    min-height: 15vh;
+  .sports-list-item {
+    width: 70%;
   }
 
-  .gallery {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-
-  .trainers-img {
-    width: 100%;
-  }
-}
-
-@media (max-width: 38em) {
-  html {
-    font-size: 45%;
-  }
-
-  /* .h1 {
-    font-size: 2.6rem;
-    width: 100%;
-    font-weight: 600;
-    display: block;
-    padding: 2rem 0;
-  }
-
-  .h2 {
-    font-size: 2.8rem;
-  }
-
-  .h3 {
-    font-size: 2.5rem;
-  }
-
-  .h4 {
-    font-size: 1.8rem;
-  } */
-
-  .header {
-    padding: 3.2rem 1.6rem;
-  }
-
-  .section-intro {
-    margin-bottom: 4.8rem;
-    padding: 0 1.6rem;
-  }
-
-  .header-logo-img {
-    width: 90%;
-  }
-
-  .section-contact {
-    padding: 0 1.6rem;
-    margin-bottom: 0;
-    margin-top: 0;
-  }
-
-  .section-about-us {
-    margin-bottom: 4.8rem;
-    padding: 0 1.6rem;
-    position: relative;
-  }
-
-  .trainers-section {
-    padding: 0 1.6rem;
-    margin-bottom: 4.8rem;
+  .h1 {
+    font-size: 3.6rem;
   }
 
   .trainers-img {
     width: 100%;
-
-    border: 1px solid #998100;
+    margin-bottom: 1.2rem;
   }
 
-  .about-text {
-    /* font-size: 1.8rem; */
-    margin-bottom: 1.6rem;
-  }
-
-  .offer {
-    font-size: 2.4rem;
-  }
-
-  .text-wrapper {
-    min-height: 10vh;
-    display: inline-block;
-    padding: 0;
-  }
-
-  .gallery {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-
-  .trainers-img {
+  .trainers-description-box {
     width: 100%;
-  }
-
-  .trainers-description {
-    /* font-size: 1.8rem; */
-    line-height: 1;
+    padding: 1.6rem;
   }
 
   .input {
     width: 100%;
   }
 
-  .textArea {
-    width: 100%;
-  }
-
-  #map {
-    width: 100%;
-    height: 50rem;
-  }
-
+  .trainers-section,
+  .section-about-us,
+  .section-intro,
+  .section-contact,
   .footer {
-    display: flex;
-    flex-direction: column-reverse;
-    margin-top: 4.4rem;
-  }
-
-  .center-footer {
-    flex-direction: column;
-    width: 100%;
-    flex: 1;
-  }
-
-  .left-footer {
-    margin-top: 6.4rem;
+    padding: 3.2rem;
+    margin: 0;
   }
 
   .footer-link-list {
-    flex-direction: column;
-    flex: 1;
-    border-top: none;
+    gap: 0;
   }
 
-  .address-list {
-    width: 100%;
-    align-items: center;
-    border-top: none;
+  .footer-link-item {
+    font-size: 1.8rem;
   }
 
-  .partners-box {
-    padding-top: 1.6rem;
-    border-top: 2px solid black;
-  }
-
-  .footer-link-list {
-    margin-bottom: 0.8rem;
+  .footer-logo {
+    width: 50%;
   }
 }

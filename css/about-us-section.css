@@ -7,17 +7,15 @@
 .about-text-box {
   background-image: url(/img/SYGNET_NO_BG.png);
   background-position: center;
-
-  background-size: 70%;
+  background-size: 50%;
   background-repeat: no-repeat;
   padding: 4.8rem 0 3.2rem 0;
 }
 
 .about-text {
-  color: #cbcbcb;
   font-size: 2.4rem;
-  font-weight: 500;
-  line-height: 1.5;
+  color: #ced4da;
+  line-height: 1.2;
   letter-spacing: 0.2rem;
   text-align: center;
 }
@@ -30,7 +28,7 @@
   margin-top: 9.6rem;
   font-size: 3.4rem;
   font-weight: 600;
-  color: #e5e5e5;
+  color: #dee2e6;
 }
 
 .sports-list {
@@ -40,6 +38,12 @@
   justify-content: center;
   margin-bottom: 9rem;
   margin-bottom: 14rem;
+}
+
+.close-popup {
+  color: #e5e5e5 !important;
+  background-color: transparent;
+  font-size: 4rem;
 }
 
 .popup-descripion {
@@ -121,6 +125,7 @@
   list-style: none;
   margin-bottom: 6.4rem;
   color: #e5e5e5;
+  color: #030303;
 }
 
 .things-item {
@@ -150,27 +155,20 @@
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
   margin-bottom: 14rem;
-  overflow: hidden;
 }
 
 .gallery-img-box {
   width: 100%;
-  overflow: hidden;
 }
 
 .gallery-img {
   width: 100%;
   height: 100%;
-  transition: all 0.7s ease-in;
+  transition: all 0.4s ease;
 }
 
 .gallery-img:hover {
-  transform: scale(1.1);
-}
-
-.test {
-  margin-bottom: 2.4rem;
-  margin-top: 20rem;
+  transform: scale(1.05);
 }
 
 .popup-descripion-text:nth-child(11) {
@@ -182,7 +180,6 @@
 .open-popup {
   background-color: #998100;
   background-image: url(../img/ZŁOTO_1.png);
-  color: white !important;
 }
 
 .hidden {

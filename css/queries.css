@@ -129,6 +129,10 @@
     font-size: 3rem;
   }
 
+  .pricing-list {
+    height: 20%;
+  }
+
   .mb-m {
     padding: 1.4rem;
   }
@@ -466,6 +470,17 @@
   .pricing-box {
     padding: 10rem 0;
   }
+
+  .pricing-list {
+    width: 90%;
+    height: 10%;
+    margin-bottom: 2.4rem;
+  }
+
+  .h4 {
+    width: 90%;
+  }
+
   .about-text-box {
     background-size: 120%;
   }
@@ -508,8 +523,19 @@
   }
 
   .pricing-list {
-    width: 90%;
+    height: 20%;
   }
+
+  .pricing-list {
+    width: 90%;
+    gap: 0.8rem;
+  }
+
+  .pricing-item {
+    display: flex;
+    flex-direction: column;
+  }
+
   .navigation-list {
     flex-direction: column;
     font-weight: 500;

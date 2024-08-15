@@ -22,14 +22,14 @@ const togglePopup = (button) => {
 openPopupBtns.forEach((button) => {
   button.addEventListener("click", function () {
     togglePopup(button);
-    body.classList.add("overflow-h");
+    // body.classList.add("overflow-h");
   });
 });
 
 closePopupBtns.forEach((button) => {
   button.addEventListener("click", function () {
     togglePopup(button);
-    body.classList.remove("overflow-h");
+    // body.classList.remove("overflow-h");
   });
 });
 
@@ -75,4 +75,11 @@ hamburgerButton.addEventListener("click", () => {
 
   nav.classList.toggle("hiddenn");
   contactBox.classList.toggle("hiddenn");
+  hamburgerButton.style.position = "fixed";
 });
+
+if (!hamburgerButton.classList.contains("active")) {
+  console.log(!hamburgerButton.classList.contains("active"));
+  hamburgerButton.style.position = "static";
+} else {
+}

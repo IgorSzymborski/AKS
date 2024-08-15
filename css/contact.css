@@ -107,6 +107,7 @@
 #map {
   width: 75vw;
   height: 65rem;
+  z-index: 22;
 }
 
 .leaflet-popup .leaflet-popup-content-wrapper {

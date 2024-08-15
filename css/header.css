@@ -110,7 +110,9 @@
   cursor: pointer;
   padding: 0;
   box-sizing: border-box;
-  z-index: 22222222;
+  z-index: 222;
+  position: fixed;
+  right: 5%;
 }
 
 .line {

@@ -466,3 +466,9 @@
     margin-bottom: 0.8rem;
   }
 }
+
+@media (max-heigtht: 18em) {
+  .popup-descripion {
+    top: -10%;
+  }
+}

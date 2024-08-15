@@ -55,12 +55,11 @@
 }
 
 .popup-descripion {
-  margin-top: 20rem;
   background-color: rgba(16, 20, 21);
   position: fixed;
   width: 100%;
   z-index: 390909090;
-  top: -25%;
+  top: 0;
   left: 0;
   right: 0;
   bottom: -10%;

@@ -132,8 +132,9 @@
 
 .facebook-logo:hover,
 .instagram-logo:hover {
-  transform: scale(1.1) translateY(-4px);
+  transform: scale(1.15) translateY(-4px);
   cursor: pointer;
+  display: inline-block;
 }
 
 .footer-icon {

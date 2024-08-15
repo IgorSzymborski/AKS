@@ -29,6 +29,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  padding: 1rem;
 }
 
 .contact-box {
@@ -138,4 +139,67 @@
 
 .active {
   display: block;
+}
+
+.pricing-box {
+  position: absolute;
+  background-color: #101415;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: flex-start;
+  padding: 24rem 0;
+
+  z-index: 22222222222222222222;
+}
+
+.pricing-list {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  justify-content: flex-start;
+}
+
+.pricing-item {
+  font-size: 1.8rem;
+  color: #ced4da;
+}
+
+.pricing-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.pricingCloseBtn {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  background: transparent;
+  color: #ced4da !important;
+  font-size: 3rem;
+}
+
+.h4 {
+  text-align: left;
+  display: inline-block;
+  width: 50%;
+}
+
+.hidden {
+  display: none;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }

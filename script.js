@@ -8,8 +8,12 @@ const nav = document.querySelector(".navigation");
 const contactBox = document.querySelector(".header-contact-box");
 const closeMenuBtn = document.querySelectorAll(".navigation-list-item");
 const navLink = document.querySelector(".nav-link");
+const pricingLink = document.querySelector(".pricingLink");
+const pricingBox = document.querySelector(".pricing-box");
+const pricingCloseBtn = document.querySelector(".pricingCloseBtn");
+const overflowH = document.querySelector(".overflow-hidden");
 
-console.log(nav);
+console.log(pricingLink);
 
 const togglePopup = (button) => {
   popups.forEach((popup) => {
@@ -22,14 +26,17 @@ const togglePopup = (button) => {
 openPopupBtns.forEach((button) => {
   button.addEventListener("click", function () {
     togglePopup(button);
-    // body.classList.add("overflow-h");
+
+    document.body.style.overflow = "hidden";
   });
 });
 
 closePopupBtns.forEach((button) => {
   button.addEventListener("click", function () {
     togglePopup(button);
-    // body.classList.remove("overflow-h");
+
+    document.body.classList.remove(".overflowH");
+    document.body.style.overflow = "";
   });
 });
 
@@ -37,7 +44,27 @@ closeMenuBtn.forEach((button) => {
   button.addEventListener("click", function () {
     nav.classList.toggle("hiddenn");
     contactBox.classList.toggle("hiddenn");
+    hamburgerButton.style.position = "static";
+    hamburgerButton.classList.remove("active");
+
+    document.body.classList.remove(".overflowH");
+    document.body.style.overflow = "";
   });
+});
+
+console.log(pricingLink);
+console.log(navLink);
+
+pricingLink.addEventListener("click", function () {
+  console.log("test");
+  pricingBox.classList.remove("hidden");
+
+  //dodanme
+  document.body.classList.add("overflowH");
+});
+
+pricingCloseBtn.addEventListener("click", () => {
+  pricingBox.classList.toggle("hidden");
 });
 
 const map = L.map("map").setView([52.39880766106131, 20.931744687666964], 17);
@@ -76,10 +103,11 @@ hamburgerButton.addEventListener("click", () => {
   nav.classList.toggle("hiddenn");
   contactBox.classList.toggle("hiddenn");
   hamburgerButton.style.position = "fixed";
+  document.body.style.overflow = "hidden";
 });
 
 if (!hamburgerButton.classList.contains("active")) {
-  console.log(!hamburgerButton.classList.contains("active"));
   hamburgerButton.style.position = "static";
+  document.body.style.overflow = "";
 } else {
 }

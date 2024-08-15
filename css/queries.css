@@ -516,6 +516,7 @@
 
   .h4 {
     width: 90%;
+    font-size: 1.8remgi;
   }
 
   .h5 {
@@ -531,6 +532,14 @@
     gap: 0.8rem;
   }
 
+
+  .pricingCloseBtn{
+    right: 0;
+  }
+
+  .pricing-item{
+    font-size: 1.6rem;
+  }
   .pricing-item {
     display: flex;
     flex-direction: column;

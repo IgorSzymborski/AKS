@@ -23,10 +23,11 @@
 
 .center-footer {
   align-items: flex-start;
+  margin-left: 5vw;
 }
 
 .left-footer {
-  align-items: flex-start;
+  align-items: center;
 }
 
 .address-list {
@@ -43,14 +44,14 @@
 }
 
 .footer-logo-box {
-  width: 100%;
+  width: 65%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   padding-bottom: 3rem;
 }
 
 .footer-logo {
-  width: 50%;
+  width: 100%;
 }
 
 .footer-link-list {
@@ -58,7 +59,7 @@
   justify-content: space-between;
   align-items: center;
   list-style: none;
-  gap: .8rem;
+  gap: 0.8rem;
   border-top: 2px solid black;
   width: 100%;
 }
@@ -72,7 +73,7 @@
 }
 
 .footer-link-item:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) translateY(4px);
 }
 
 .footer-link {
@@ -106,8 +107,35 @@
   text-transform: uppercase;
 }
 
-.social-link {
-  font-size: 3.2rem;
-  color: #101415;
-  margin-left: 1rem;
+.social-link:visited,
+.social-link:link {
+  font-size: 2.8rem;
+  margin-right: 0.4rem;
+}
+
+.social-link:hover {
+  transform: scale(1.1);
+}
+
+.instagram-logo,
+.facebook-logo {
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s ease-out;
+}
+
+.facebook-logo {
+  color: #3b5998;
+  background: transparent;
+}
+
+.facebook-logo:hover,
+.instagram-logo:hover {
+  transform: scale(1.1) translateY(-4px);
+  cursor: pointer;
+}
+
+.footer-icon {
+  font-size: 3.6rem;
 }

@@ -1,0 +1,305 @@
+/* 1520 */
+@media (max-width: 96em) {
+  html {
+    font-size: 55%;
+  }
+
+  .popup-descripion {
+    top: -20%;
+  }
+}
+
+/* 1440 */
+@media (max-width: 90em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* 1351 */
+@media (max-width: 85em) {
+  html {
+    font-size: 50%;
+  }
+}
+/* 1264 */
+@media (max-width: 79em) {
+  html {
+    font-size: 45%;
+  }
+
+  .header-contact-detail {
+    font-size: 2rem;
+  }
+  .nav-link:visited,
+  .nav-link:link {
+    font-size: 1.8rem;
+  }
+}
+
+/* 1120 */
+@media (max-width: 70em) {
+  html {
+    font-size: 40%;
+  }
+
+  .text-wrapper {
+    min-height: 25vh;
+  }
+
+  .h1 {
+    padding: 1rem;
+  }
+
+  .popup-descripion {
+    top: -15%;
+  }
+}
+
+/* 1000 */
+@media (max-width: 62.5em) {
+  html {
+    font-size: 40%;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .header-contact-box {
+    display: none;
+  }
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    background-color: #101415;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 20;
+  }
+
+  .hiddenn {
+    display: flex;
+  }
+
+  .navigation-list {
+    flex-direction: column;
+
+    justify-content: center;
+    font-size: 3.6rem;
+    gap: 8rem;
+    height: 100vh;
+  }
+
+  .nav-link:visited,
+  .nav-link:link {
+    font-size: 3.2rem;
+  }
+
+  .sports-list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6.4rem;
+  }
+
+  .trainers-description {
+    font-size: 1.9rem;
+    padding: 2.4rem 0;
+    line-height: 1;
+  
+  }
+}
+
+/* 864 */
+@media (max-width: 54em) {
+  html {
+    font-size: 35%;
+  }
+
+  .sports-list-item {
+    width: 50%;
+  }
+
+  .open-popup {
+    width: 100%;
+    font-size: 2.4rem;
+  }
+
+  .h1 {
+    font-size: 4.4rem;
+  }
+
+  .text-wrapper {
+    min-height: 20vh;
+  }
+
+  .trainers-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 4.5rem 4.5rem;
+  }
+
+  .trainers-wrapper-img {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 4.5rem 4.5rem;
+  }
+
+  .trainers-img {
+    width: 100%;
+    border-radius: 2.4rem 0;
+    /* border: 3px solid #998100; */
+    border-radius: 0 0 4.5rem 4.5rem;
+  }
+
+  .trainers-description-box {
+    width: 80%;
+    padding: 2.4rem 0;
+  }
+
+  .trainers-description {
+    padding: 2.4rem 0;
+    font-size: 2.4rem;
+  }
+
+  .form-box {
+    flex-direction: column;
+    margin-top: 4.8rem;
+  }
+
+  .form {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 70%;
+
+    background-repeat: no-repeat;
+  }
+
+  .label {
+    align-self: flex-start;
+  }
+
+  .input {
+    width: 30%;
+    align-self: flex-start;
+  }
+
+  .textArea {
+    width: 100%;
+    align-self: flex-start;
+  }
+
+  .form-button {
+    margin-bottom: 6.4rem;
+  }
+
+  #map {
+    width: 95vw;
+    height: 50rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+  }
+
+  .left-footer,
+  .center-footer,
+  .right-footer {
+    width: 100%;
+    align-items: center;
+  }
+
+  .address-list {
+    width: 100%;
+    align-items: center;
+    text-align: left;
+  }
+
+  .address-item,
+  .footer-link-item {
+    font-size: 2.2rem;
+    padding: 1rem;
+    text-align: left;
+  }
+
+  .footer-logo-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-logo {
+    width: 30%;
+  }
+
+  .social-link {
+    font-size: 4.4rem;
+    color: #101415;
+    margin-left: 1rem;
+  }
+}
+
+/* 500 */
+@media (max-width: 31.25em) {
+  html {
+    font-size: 35%;
+  }
+
+  .sports-list-item {
+    width: 70%;
+  }
+
+  .h1 {
+    font-size: 3.6rem;
+  }
+
+  .trainers-img {
+    width: 100%;
+    margin-bottom: 1.2rem;
+  }
+
+  .trainers-description-box {
+    width: 100%;
+    padding: 1.6rem;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .trainers-section,
+  .section-about-us,
+  .section-intro,
+  .section-contact,
+  .footer {
+    padding: 3.2rem;
+    margin: 0;
+  }
+
+  .footer-link-list {
+    gap: 0;
+  }
+
+  .footer-link-item {
+    font-size: 1.8rem;
+  }
+
+  .footer-logo {
+    width: 50%;
+  }
+}

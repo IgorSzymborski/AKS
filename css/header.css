@@ -1,26 +1,41 @@
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3.2rem 4.8rem;
+  flex-direction: column;
+  padding: 1.2rem 3.2rem 2.2rem 3.2rem;
   margin-bottom: 3.2rem;
+  /* position: fixed; */
+  /* top: 0; */
+  /* bottom: 0; */
+  /* right: 0;
+  left: 0; */
+  /* background-color: rgba(102, 102, 102, 0.035); */
+  /* z-index: 99999999999999; */
+  /* border-bottom: 2px solid #e5e5e5; */
 }
 
 .header-logo-box {
-  width: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: -2.4rem;
 }
 
 .header-logo-img {
-  width: 100%;
+  width: 28rem;
 }
 
 .header-contact-box {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-right: auto;
-  margin-left: 4.4rem;
-  gap: 0.8rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact-box {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  margin-right: 2.4rem;
 }
 
 .header-contact-detail {
@@ -31,12 +46,12 @@
 .contactLink:link {
   color: #e5e5e5;
   text-decoration: none;
-  font-weight: 600;
   text-transform: uppercase;
   display: inline-block;
   transition: all 0.5s ease;
   backface-visibility: hidden;
   will-change: transform;
+  font-size: 1.8rem;
 }
 
 .contactLink:hover {
@@ -56,7 +71,6 @@
 }
 
 .navigation-list-item {
-  font-size: 1.2rem;
   transition: all 0.3s ease;
 }
 
@@ -71,7 +85,7 @@
   color: #e5e5e5;
   text-decoration: none;
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   transition: all 0.4s ease-out;
   display: inline-block;
@@ -97,7 +111,6 @@
   padding: 0;
   box-sizing: border-box;
   z-index: 22222222;
-  /* background-color: #e4e2e2; */
 }
 
 .line {

@@ -24,11 +24,25 @@
     />
     <meta property="og:url" content="https://aks-legionowo.pl" />
 
+    <link
+      rel="icon"
+      href="./img/favicon.png"
+      sizes="192x192"
+      type="image/png"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      href="./img/favicon.png"
+      sizes="192x192"
+      type="image/png"
     />
 
     <link rel="stylesheet" href="css/general.css" />
@@ -64,53 +78,66 @@
   <body>
     <div class="container">
       <header class="header">
+        <div class="header-contact-box">
+          <div class="contact-box">
+            <p class="header-contact-detail">
+              <a href="tel: +48794002373" class="contactLink">
+                <i class="fa-solid fa-phone contact-icon"></i>794-002-373</a
+              >
+            </p>
+            <p class="header-contact-detail">
+              <a
+                href="mailto: stowarzyszenie.aks@gmail.com"
+                class="contactLink"
+              >
+                <i class="fa-solid fa-at contact-icon"></i
+                >stowarzyszenie.aks@gmail.com</a
+              >
+            </p>
+          </div>
+
+          <div class="social-box">
+            <a href="#" class="social-link">
+              <i class="fa-brands fa-square-facebook facebook-logo"></i
+            ></a>
+            <a href="#" class="social-link instagram-logo"
+              ><i class="fa-brands fa-square-instagram instagram-logo"></i
+            ></a>
+          </div>
+        </div>
+
         <div class="header-logo-box">
           <img
-            src="img/header-logo-gold.png"
+            src="img/header-logo-gold.webp"
             alt="Logo klubu"
             class="header-logo-img"
           />
+          <button class="hamburger" id="hamburger-button">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+
+          <nav class="navigation">
+            <ul class="navigation-list">
+              <li class="navigation-list-item">
+                <a href="#secion1" class="nav-link">O nas</a>
+              </li>
+              <li class="navigation-list-item">
+                <a href="#" class="nav-link">Grafik zajęć</a>
+              </li>
+              <li class="navigation-list-item">
+                <a href="#" class="nav-link">Dokumenty</a>
+              </li>
+              <li class="navigation-list-item">
+                <a href="#" class="nav-link">Cennik</a>
+              </li>
+              <li class="navigation-list-item">
+                <a href="#section2" class="nav-link btn">Kontakt</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-
-        <button class="hamburger" id="hamburger-button">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </button>
-
-        <div class="header-contact-box">
-          <p class="header-contact-detail">
-            <a href="tel: +48794002373" class="contactLink">
-              <i class="fa-solid fa-phone contact-icon"></i>794-002-373</a
-            >
-          </p>
-          <p class="header-contact-detail">
-            <a href="mailto: stowarzyszenie.aks@gmail.com" class="contactLink">
-              <i class="fa-solid fa-at contact-icon"></i
-              >stowarzyszenie.aks@gmail.com</a
-            >
-          </p>
-        </div>
-
-        <nav class="navigation">
-          <ul class="navigation-list">
-            <li class="navigation-list-item">
-              <a href="#" class="nav-link">O nas</a>
-            </li>
-            <li class="navigation-list-item">
-              <a href="#" class="nav-link">Grafik zajęć</a>
-            </li>
-            <li class="navigation-list-item">
-              <a href="#" class="nav-link">Dokumenty</a>
-            </li>
-            <li class="navigation-list-item">
-              <a href="#" class="nav-link">Cennik</a>
-            </li>
-            <li class="navigation-list-item">
-              <a href="#" class="nav-link btn">Kontakt</a>
-            </li>
-          </ul>
-        </nav>
       </header>
 
       <main>
@@ -123,7 +150,7 @@
           </div>
         </section>
 
-        <section class="section-about-us">
+        <section class="section-about-us" id="secion1">
           <h2 class="h2 m-clear">
             Witamy w AKS - Akademii Kształcenia Sportowego!
           </h2>
@@ -177,7 +204,7 @@
               <button class="btn open-popup" data-btn="5">Boks</button>
             </li>
             <li class="sports-list-item">
-              <button class="btn open-popup" data-btn="5">
+              <button class="btn open-popup" data-btn="6">
                 Treningi personalne
               </button>
             </li>
@@ -186,7 +213,7 @@
           <!-- POPUP START -->
           <div class="popup-descripion hidden fade-out" data-popup="1">
             <button class="btn close-popup" data-btn="1">X</button>
-            <h3 class="h3 mb-m">Taekwondo Olimpijskie</h3>
+            <h3 class="h3 mb-m popup-h3">Taekwondo Olimpijskie</h3>
 
             <p class="popup-descripion-text">
               Zajęcia taekwondo w klubie sportowym dla dzieci i młodzieży są
@@ -218,7 +245,7 @@
               </li>
               <li class="sports-section-item">
                 <span class="group-name">
-                  Dzieci grupa GEPARDY (8-11 lat)
+                  Dzieci grupa GEPARDY (8-13 lat)
                 </span>
                 Grupa początkująca dla starszych dzieci, treningi które kładą
                 większy nacisk na techniki i formy, rozwijając technikę, siłę,
@@ -226,7 +253,7 @@
               </li>
               <li class="sports-section-item">
                 <span class="group-name"
-                  >Dzieci grupa zaawansowana TYGRYSY (8-12 lat)</span
+                  >Dzieci grupa zaawansowana TYGRYSY (8-13 lat)</span
                 >
 
                 Grupa przeznaczona dla osób z większym stażem treningowym w
@@ -293,7 +320,7 @@
             </p>
             <h4 class="h4">Dlaczego warto wybrać pilates?</h4>
 
-            <p class="popup-descripion-text testt">
+            <p class="popup-descripion-text">
               Pilates to nie tylko ćwiczenia – to styl życia. Dzięki regularnym
               treningom:
             </p>
@@ -342,7 +369,7 @@
               </li>
             </ul>
             <h4 class="h4">Gdzie odbywają się zajęcia?</h4>
-            <p class="popup-descripion-text clear">
+            <p class="popup-descripion-text">
               Zajęcia odbywają się w sali treningowej naszego klubu sportowego,
               która jest wyposażona w maty zapewniające bezpieczeństwo podczas
               ćwiczeń. Klub znajduje się w dogodnej lokalizacji, na
@@ -616,26 +643,233 @@
               i zacznij swoją przygodę z boksem w naszym klubie sportowym!
             </p>
           </div>
+          <div class="popup-descripion hidden" data-popup="5">
+            <button class="btn close-popup" data-btn="5">X</button>
+            <h3 class="h3 mb-m">Boks</h3>
+
+            <p class="popup-descripion-text">
+              Zapraszamy serdecznie do naszego klubu sportowego, gdzie każdy,
+              niezależnie od wieku, znajdzie coś dla siebie! Oferujemy zajęcia
+              bokserskie dla dzieci, młodzieży i dorosłych, prowadzone przez
+              doświadczonego trenera w przyjaznej i motywującej atmosferze.
+              Dołącz do nas i rozwijaj swoje umiejętności bokserskie, kondycję
+              oraz pewność siebie dodatkowo świetnie się bawiąc !
+            </p>
+            <h4 class="h4">Dla kogo są te zajęcia?</h4>
+
+            <ul class="sports-section-list">
+              <li class="sports-section-item">
+                <span class="group-name"
+                  >Dla Dzieci i Młodzieży (9-13lat)
+                </span>
+                Nasze zajęcia bokserskie to nie tylko nauka podstawowych technik
+                bokserskich, ale również wspaniała okazja do rozwijania
+                koordynacji, dyscypliny i pracy zespołowej. Poprzez gry i
+                zabawy, dzieci uczą się podstaw boksu w bezpieczny i przyjazny
+                sposób. Zajęcia te pomagają w budowaniu pewności siebie, nauki
+                umiejętności dążenia do celu i zdrowych nawyków na całe życie.
+              </li>
+              <li class="sports-section-item">
+                <span class="group-name"
+                  >Dla Młodzieży i Dorosłych (14+lat)
+                </span>
+                Zajęcia dla młodzieży i dorosłych to intensywniejszy program,
+                który łączy treningi techniczne, kondycyjne oraz mentalne.
+                Przygotowaliśmy zajęcia, które pomogą w poprawie kondycji,
+                redukcji stresu i rozwijaniu umiejętności technik pięściarstwa.
+                Bez względu na poziom zaawansowania, nasze zajęcia są
+                dostosowane do Twoich potrzeb i możliwości.
+              </li>
+            </ul>
+            <h4 class="h4">Co zabrać na pierwsze zajęcia?</h4>
+
+            <ul class="things-list">
+              <li class="things-item">
+                <span class="thing-name">Wygodny strój sportowy</span>
+                Koszulka, spodenki lub legginsy.
+              </li>
+
+              <li class="things-item">
+                <span class="thing-name">Obuwie:</span>
+                Przed wejściem na matę należy zmienić obuwie na czyste,
+                przeznaczone wyłącznie do użytku wewnętrznego najlepiej z białą
+                lub jasną podeszwą.
+              </li>
+
+              <li class="things-item">
+                <span class="thing-name">Rękawice do boksu:</span>
+                Jeśli posiadasz własne, zabierz je na zajęcia. Jeśli nie,
+                posiadamy klubowe.
+              </li>
+              <li class="things-item">
+                <span class="thing-name">Woda:</span>
+                Ważne jest, aby być dobrze nawodnionym przed, w trakcie i po
+                zajęciach.
+              </li>
+              <li class="things-item">
+                <span class="thing-name">Ręcznik:</span>
+                Przydatny do wytarcia potu po intensywnym treningu.
+              </li>
+            </ul>
+            <h4 class="h4">Gdzie odbywają się zajęcia?</h4>
+            <p class="popup-descripion-text clear">
+              Zajęcia odbywają się w sali treningowej naszego klubu sportowego,
+              która jest wyposażona w maty zapewniające bezpieczeństwo podczas
+              ćwiczeń. Klub znajduje się w dogodnej lokalizacji, na
+              ul.Jagiellońskiej 13 w Legionowie z miejscami parkingowymi dla
+              klientów. Nie czekaj! Dołącz do nas już dziś i odkryj pasję do
+              boksu, która może stać się Twoim nowym sposobem na życie. Zapisz
+              się na zajęcia i zacznij swoją przygodę z boksem w naszym klubie
+              sportowym!
+            </p>
+            <p class="popup-descripion-text clear">
+              Nie czekaj! Dołącz do nas już dziś i odkryj pasję do boksu, która
+              może stać się Twoim nowym sposobem na życie. Zapisz się na zajęcia
+              i zacznij swoją przygodę z boksem w naszym klubie sportowym!
+            </p>
+          </div>
+
+          <!-- Personbalne -->
+
+          <div class="popup-descripion hidden" data-popup="6">
+            <button class="btn close-popup" data-btn="6">X</button>
+            <h3 class="h3 mb-m">Treningi Personalne</h3>
+
+            <p class="popup-descripion-text">
+              Zadbaj o swoje zdrowie i formę pod okiem doświadczonych trenerów
+              personalnych!
+            </p>
+            <p class="popup-descripion-text">
+              Jeśli męczy Cię tłok i monotonia maszyn na tradycyjnych
+              siłowniach, to nasze miejsce jest dla Ciebie idealne! Oferujemy
+              spokojne, kameralne warunki do treningu, gdzie możesz skupić się
+              na swoich celach bez zbędnych rozpraszaczy.
+            </p>
+            <h4 class="h4">Dlaczego warto wybrać treningi personalne?</h4>
+
+            <ul class="sports-section-list">
+              <li class="sports-section-item">
+                <span class="group-name">Indywidualne podejście: </span>
+                Każdy z nas jest inny, dlatego nasi trenerzy dostosowują program
+                treningowy do Twoich potrzeb, celów i możliwości. Bez względu na
+                to, czy chcesz schudnąć, zbudować masę mięśniową, poprawić
+                kondycję, czy przygotować się do zawodów – jesteśmy tutaj, aby
+                Ci pomóc.
+              </li>
+              <li class="sports-section-item">
+                <span class="group-name">Szybsze efekty: </span>
+                Z nami osiągniesz swoje cele szybciej i bardziej efektywnie.
+                Dzięki indywidualnej opiece trenera unikniesz błędów, które mogą
+                spowalniać postępy.
+              </li>
+              <li class="sports-section-item">
+                <span class="group-name">Motywacja: </span>
+                Treningi z trenerem to także dodatkowa dawka motywacji. Nie
+                musisz się martwić o brak chęci do ćwiczeń – Twój trener zadba o
+                to, abyś na każdym treningu był zmotywowany i pełen energii.
+              </li>
+              <li class="sports-section-item">
+                <span class="group-name">Bezpieczeństwo: </span>
+                Ćwiczenia pod okiem profesjonalisty zmniejszają ryzyko kontuzji.
+                Nasi trenerzy zadbają o prawidłową technikę wykonywanych
+                ćwiczeń, co jest kluczowe dla Twojego bezpieczeństwa i
+                efektywności treningu.
+              </li>
+            </ul>
+
+            <h4 class="h4">Oferta treningów personalnych:</h4>
+            <ul class="things-list">
+              <h5 class="h5">1. Treningi indywidualne:</h5>
+              <li class="things-item">
+                Treningi dopasowane do Twojego grafiku.
+              </li>
+
+              <li class="things-item">
+                Całkowite skupienie trenera na Twoich potrzebach.
+              </li>
+
+              <li class="things-item pb-m">
+                Konsultacja i monitoring postępów.
+              </li>
+
+              <h5 class="h5">2. Treningi w małych grupach (2-3 osoby):</h5>
+              <li class="things-item">
+                Idealne rozwiązanie, jeśli chcesz ćwiczyć z partnerem lub
+                przyjacielem.
+              </li>
+              <li class="things-item">
+                Korzystna cena przy zachowaniu wysokiej jakości treningu.
+              </li>
+            </ul>
+            <h4 class="h4">Cennik:</h4>
+
+            <p class="popup-descripion-text mb-s">
+              Z przyjemnością informujemy, że cena za treningi indywidualne oraz
+              grupowe jest taka sama. Zachęcamy do skorzystania z naszych usług,
+              niezależnie od wybranej formy treningu!
+            </p>
+
+            <ul class="things-list">
+              <li class="things-item">Jednorazowy trening 150 zł</li>
+
+              <li class="things-item">Pakiet 5 treningów 600 zł</li>
+
+              <li class="things-item">Pakiet 10 treningów 1000 zł.</li>
+            </ul>
+
+            <h4 class="h4">Jak zacząć?</h4>
+
+            <ul class="things-list">
+              <li class="things-item">
+                1. Skontaktuj się z nami telefonicznie lub przez formularz na
+                naszej stronie, aby umówić się na bezpłatną konsultację.
+              </li>
+
+              <li class="things-item">
+                2. Wspólnie ustalimy Twoje cele i zaproponujemy odpowiedni plan
+                treningowy.
+              </li>
+
+              <li class="things-item">3. Zaczynamy treningi!</li>
+            </ul>
+
+            <h4 class="h4 mb-s">Gdzie odbywają się zajęcia?</h4>
+            <p class="popup-descripion-text">
+              Zajęcia odbywają się w sali treningowej naszego klubu sportowego,
+              która jest wyposażona w maty zapewniające bezpieczeństwo podczas
+              ćwiczeń. Klub znajduje się w dogodnej lokalizacji, na
+              ul.Jagiellońskiej 13 w Legionowie z miejscami parkingowymi dla
+              klientów. Nie czekaj! Dołącz do nas już dziś i odkryj pasję do
+              boksu, która może stać się Twoim nowym sposobem na życie. Zapisz
+              się na zajęcia i zacznij swoją przygodę z boksem w naszym klubie
+              sportowym!
+            </p>
+            <p class="popup-descripion-text">
+              Nie czekaj! Dołącz do nas już dziś i odkryj pasję do boksu, która
+              może stać się Twoim nowym sposobem na życie. Zapisz się na zajęcia
+              i zacznij swoją przygodę z boksem w naszym klubie sportowym!
+            </p>
+          </div>
 
           <h2 class="h2">Dołącz do nas!</h2>
           <div class="gallery">
             <div class="gallery-img-box">
-              <img src="img/gallery1.JPG" alt="" class="gallery-img" />
+              <img src="img/gallery1.webp" alt="" class="gallery-img" />
             </div>
             <div class="gallery-img-box">
-              <img src="img/gallery2.JPG" alt="" class="gallery-img" />
+              <img src="img/gallery2.webp" alt="" class="gallery-img" />
             </div>
             <div class="gallery-img-box">
-              <img src="img/gallery3.JPG" alt="" class="gallery-img" />
+              <img src="img/gallery3.webp" alt="" class="gallery-img" />
             </div>
             <div class="gallery-img-box">
-              <img src="img/gallery4.JPG" alt="" class="gallery-img" />
+              <img src="img/gallery4.webp" alt="" class="gallery-img" />
             </div>
             <div class="gallery-img-box">
-              <img src="img/gallery5.JPG" alt="" class="gallery-img" />
+              <img src="img/gallery5.webp" alt="" class="gallery-img" />
             </div>
             <div class="gallery-img-box">
-              <img src="img/gallery6.JPG" alt="" class="gallery-img" />
+              <img src="img/gallery6.webp" alt="" class="gallery-img" />
             </div>
           </div>
         </section>
@@ -644,7 +878,7 @@
           <h2 class="h2">Kadra trenerska</h2>
           <div class="trainers-wrapper">
             <div class="trainers-wrapper-img">
-              <img src="img/Karol.jpg" alt="" class="trainers-img" />
+              <img src="img/Karol.webp" alt="" class="trainers-img" />
             </div>
 
             <div class="trainers-description-box">
@@ -676,7 +910,7 @@
 
           <div class="trainers-wrapper">
             <div class="trainers-wrapper-img">
-              <img src="img/Ola.jpg" alt="" class="trainers-img" />
+              <img src="img/Ola.webp" alt="" class="trainers-img" />
             </div>
             <div class="trainers-description-box">
               <h3 class="h3 dark">Trenerka Ola</h3>
@@ -705,7 +939,7 @@
           </div>
           <div class="trainers-wrapper">
             <div class="trainers-wrapper-img">
-              <img src="img/Konrad.jpg" alt="" class="trainers-img" />
+              <img src="img/Konrad.webp" alt="" class="trainers-img" />
             </div>
 
             <div class="trainers-description-box">
@@ -736,7 +970,7 @@
           </div>
         </section>
 
-        <section class="section-contact">
+        <section class="section-contact" id="section2">
           <h3 class="h3">Zapraszamy do kontaktu</h3>
           <div class="form-box">
             <form action="" class="form">
@@ -757,7 +991,7 @@
               <label for="text-content" class="label">Treść wiadomości</label>
               <textarea
                 name=""
-                id="textcontent"
+                id="text-content"
                 cols="55"
                 rows="14"
                 class="textArea"
@@ -773,17 +1007,21 @@
         <div class="left-footer">
           <div class="footer-logo-box">
             <img
-              src="img/FULL_NAME_BLACK_NO_BG.png"
+              src="img/FULL_NAME_BLACK_NO_BG.webp"
               alt=""
               class="footer-logo"
             />
           </div>
           <div class="social-box">
             <a href="#" class="social-link"
-              ><i class="fa-brands fa-square-facebook facebook-logo"></i
+              ><i
+                class="fa-brands fa-square-facebook facebook-logo footer-icon"
+              ></i
             ></a>
             <a href="#" class="social-link instagram-logo"
-              ><i class="fa-brands fa-square-instagram instagram-logo"></i
+              ><i
+                class="fa-brands fa-square-instagram instagram-logo footer-icon"
+              ></i
             ></a>
           </div>
         </div>

@@ -11,6 +11,7 @@
     url(/img/OlympicII.webp);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,9 +20,4 @@
   box-shadow: 0 0.5rem 2rem 0 hsla(0, 0%, 0%, 0.2);
 
   transition: background-position 0.2s ease-out; /* Płynne przejście */
-}
-
-
-.h1-intro{
-  line-height: 1;
 }

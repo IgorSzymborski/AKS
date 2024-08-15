@@ -5,6 +5,9 @@ const sendFormBtn = document.querySelector(".form-button");
 const popups = document.querySelectorAll(".popup-descripion");
 const maps = document.querySelector(".map");
 const nav = document.querySelector(".navigation");
+const contactBox = document.querySelector(".header-contact-box");
+const closeMenuBtn = document.querySelectorAll(".navigation-list-item");
+const navLink = document.querySelector(".nav-link");
 
 console.log(nav);
 
@@ -27,6 +30,13 @@ closePopupBtns.forEach((button) => {
   button.addEventListener("click", function () {
     togglePopup(button);
     body.classList.remove("overflow-h");
+  });
+});
+
+closeMenuBtn.forEach((button) => {
+  button.addEventListener("click", function () {
+    nav.classList.toggle("hiddenn");
+    contactBox.classList.toggle("hiddenn");
   });
 });
 
@@ -64,4 +74,5 @@ hamburgerButton.addEventListener("click", () => {
   hamburgerButton.classList.toggle("active");
 
   nav.classList.toggle("hiddenn");
+  contactBox.classList.toggle("hiddenn");
 });

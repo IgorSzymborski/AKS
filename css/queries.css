@@ -463,6 +463,9 @@
 }
 
 @media (max-width: 1024px) {
+  .pricing-box {
+    padding: 10rem 0;
+  }
   .about-text-box {
     background-size: 120%;
   }
@@ -496,6 +499,17 @@
     height: 150vh;
   }
 
+  .h4 {
+    width: 90%;
+  }
+
+  .h5 {
+    text-align: center;
+  }
+
+  .pricing-list {
+    width: 90%;
+  }
   .navigation-list {
     flex-direction: column;
     font-weight: 500;

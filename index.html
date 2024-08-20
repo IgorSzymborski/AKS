@@ -59,13 +59,11 @@
       crossorigin="anonymous"
     ></script>
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
+
     <script type="text/javascript">
       (function () {
         emailjs.init({
@@ -74,6 +72,8 @@
       })();
     </script>
     <title>Akademia Kształcenia Sportowego</title>
+
+    <script type="module" src="script.js"></script>
   </head>
   <body>
     <div class="container">
@@ -131,8 +131,8 @@
               <li class="navigation-list-item">
                 <a href="#" class="nav-link">Grafik zajęć</a>
               </li>
-              <li class="navigation-list-item">
-                <a href="#" class="nav-link">Dokumenty</a>
+              <li class="navigation-list-item docLink">
+                <a href="#" class="nav-link docLink">Dokumenty</a>
               </li>
               <li class="navigation-list-item pricingLink">
                 <a href="#" class="nav-link pricingLink">Cennik</a>
@@ -146,8 +146,9 @@
 
         <div class="pricing-box hidden">
           <button class="btn pricingCloseBtn">X</button>
-          <h4 class="h4">Cennik Zajęć - AKS Legionowo</h4>
+
           <ul class="pricing-list">
+            <h4 class="h4">Cennik Zajęć - AKS Legionowo</h4>
             <li class="pricing-item">
               <span class="pricing-name">Termin płatności: </span>
               Do 10 dnia każdego miesiąca za dany miesiąc
@@ -164,14 +165,8 @@
             </li>
           </ul>
 
-          <h4 class="h4">Dane do przelewu</h4>
-
           <ul class="pricing-list">
-            <li class="pricing-item">
-              <span class="pricing-name">Termin płatności: </span>
-              Do 10 dnia każdego miesiąca za dany miesiąc
-            </li>
-
+            <h4 class="h4">Dane do przelewu</h4>
             <li class="pricing-item">
               <span class="pricing-name">Tytuł przelewu: </span>
               Składka członkowska - Imię i Nazwisko uczestnika - Miesiąc
@@ -181,9 +176,43 @@
               <span class="pricing-name"> Konto bankowe:</span>
               34 1090 1841 0000 0001 5827 2320
             </li>
+
+            <li class="pricing-item">
+              <span class="pricing-name"> Odbiorca:</span>
+              AKS-Akademia Kształcenia Sportowego
+            </li>
+
+            <li class="pricing-item">
+              <span class="pricing-name"> Adres:</span>
+              Warszawska 36/11, Legionowo
+            </li>
           </ul>
 
-          <h5 class="h5">Serdecznie zapraszamy do naszego klubu sportowego!</h5>
+          <h5 class="h5 center">
+            Serdecznie zapraszamy do naszego klubu sportowego!
+          </h5>
+        </div>
+
+        <div class="docsPopup hidden">
+          <button class="btn docsCloseButton">X</button>
+          <div class="docsWrapper">
+            <h3 class="h4">Dokumenty</h3>
+            <p class="docsDescription">
+              Poniżej dokumenty, które możesz pobrać w celu dalszego zapoznania
+              się. Kliknij odpowiednie linki poniżej, aby pobrać pliki na swój
+              komputer. W razie pytań lub problemów prosimy o kontakt.
+            </p>
+            <a
+              href="/dox/Kwestionariusz osobowy_240821_003656.pdf"
+              class="docsLink"
+              >Kwestionariusz osobowy</a
+            >
+            <a
+              href="dox/STANDARDY-OCHRONY-MAŁOLETNICH-AKS-LEGIONOWO_240821_003717.pdf"
+              class="docsLink"
+              >Standardy ochorny małoletnich AKS-Legionowo</a
+            >
+          </div>
         </div>
       </header>
 
@@ -925,21 +954,26 @@
           <h2 class="h2">Kadra trenerska</h2>
           <div class="trainers-wrapper">
             <div class="trainers-wrapper-img">
-              <img src="img/Karol.webp" alt="" class="trainers-img" />
+              <img
+                src="img/Karol-Hołubowicz.webp"
+                alt=""
+                class="trainers-img"
+              />
             </div>
 
             <div class="trainers-description-box">
               <h3 class="h3 dark">Trener Karol</h3>
               <p class="trainers-description">
                 Absolwent Akademii Wychowania Fizycznego w Warszawie na kierunku
-                wychowanie fizyczne, trener taekwondo oraz kickboxingu dla
-                dzieci. Wybitny specjalista z wieloletnim doświadczeniem zarówno
-                jako zawodnik, jak i trener. Jego kariera sportowa obejmuje 14
-                lat intensywnych treningów w kadrze narodowej oraz udziału w
-                licznych zawodach na szczeblu krajowym i międzynarodowym. Zdobył
-                wiele medali, w tym 12 razy tytuł Mistrza Polski oraz 2 razy
-                tytuł Mistrza Europy co świadczy o jego wyjątkowych
-                umiejętnościach i determinacji w dążeniu do celu.
+                wychowanie fizyczne. Karol Hołubowicz trener taekwondo oraz
+                kickboxingu dla dzieci. Wybitny specjalista z wieloletnim
+                doświadczeniem zarówno jako zawodnik, jak i trener. Jego kariera
+                sportowa obejmuje 14 lat intensywnych treningów w kadrze
+                narodowej oraz udziału w licznych zawodach na szczeblu krajowym
+                i międzynarodowym. Zdobył wiele medali, w tym 12 razy tytuł
+                Mistrza Polski oraz 2 razy tytuł Mistrza Europy co świadczy o
+                jego wyjątkowych umiejętnościach i determinacji w dążeniu do
+                celu.
                 <span class="break"></span>
                 Aktualnie, jako trener, z powodzeniem dzieli się swoją pasją i
                 doświadczeniem z zawodnikami na różnych poziomach zaawansowania.
@@ -957,36 +991,40 @@
 
           <div class="trainers-wrapper">
             <div class="trainers-wrapper-img">
-              <img src="img/Ola.webp" alt="" class="trainers-img" />
+              <img
+                src="img/Aleksandra-Hołubowicz.webp"
+                alt=""
+                class="trainers-img"
+              />
             </div>
             <div class="trainers-description-box">
               <h3 class="h3 dark">Trenerka Ola</h3>
               <p class="trainers-description">
-                Absolwentka Akademii Wychowania Fizycznego w Warszawie na
-                kierunku wychowanie fizyczne. Trenerka pilatesu dla kobiet oraz
-                gimnastyki dla dzieci w naszym klubie sportowym to wszechstronna
-                specjalistka z wyjątkowym doświadczeniem. Jej kariera sportowa
-                rozpoczęła się od pływania, które trenowała przez wiele lat na
-                wysokim poziomie, zdobywając liczne wyróżnienia i osiągnięcia.
-                Przez 8 lat pracowała jako instruktor pływania, zdobywając
-                głęboką wiedzę na temat treningu fizycznego oraz kształtowania
-                zdrowych nawyków. <span class="break"></span>Po zakończeniu
-                kariery pływackiej, trenerka skoncentrowała się na innych
-                formach aktywności fizycznej, zdobywając certyfikaty i
-                kwalifikacje w dziedzinie pilatesu oraz gimnastyki. Jej
-                doświadczenie pozwala na unikalne podejście do treningów,
-                łączące elementy siły, wytrzymałości i gibkości ciała. Trenerka
-                jest znana z ciepłego i empatycznego podejścia, co sprawia, że
-                zarówno kobiety, jak i dzieci chętnie uczestniczą w jej
-                zajęciach. Jej zaangażowanie, kreatywność oraz umiejętność
-                motywowania podopiecznych czynią ją niezwykle cenioną członkinią
-                zespołu naszego klubu sportowego.
+                Aleksandra Hołubowicz Absolwentka Akademii Wychowania Fizycznego
+                w Warszawie na kierunku wychowanie fizyczne. Trenerka pilatesu
+                dla kobiet oraz gimnastyki dla dzieci w naszym klubie sportowym
+                to wszechstronna specjalistka z wyjątkowym doświadczeniem. Jej
+                kariera sportowa rozpoczęła się od pływania, które trenowała
+                przez wiele lat na wysokim poziomie, zdobywając liczne
+                wyróżnienia i osiągnięcia. Przez 8 lat pracowała jako instruktor
+                pływania, zdobywając głęboką wiedzę na temat treningu fizycznego
+                oraz kształtowania zdrowych nawyków.
+                <span class="break"></span>Po zakończeniu kariery pływackiej,
+                trenerka skoncentrowała się na innych formach aktywności
+                fizycznej, zdobywając certyfikaty i kwalifikacje w dziedzinie
+                pilatesu oraz gimnastyki. Jej doświadczenie pozwala na unikalne
+                podejście do treningów, łączące elementy siły, wytrzymałości i
+                gibkości ciała. Trenerka jest znana z ciepłego i empatycznego
+                podejścia, co sprawia, że zarówno kobiety, jak i dzieci chętnie
+                uczestniczą w jej zajęciach. Jej zaangażowanie, kreatywność oraz
+                umiejętność motywowania podopiecznych czynią ją niezwykle
+                cenioną członkinią zespołu naszego klubu sportowego.
               </p>
             </div>
           </div>
           <div class="trainers-wrapper">
             <div class="trainers-wrapper-img">
-              <img src="img/Konrad.webp" alt="" class="trainers-img" />
+              <img src="img/Konrad-Skalski.webp" alt="" class="trainers-img" />
             </div>
 
             <div class="trainers-description-box">
@@ -1012,6 +1050,58 @@
                 kickboxingu. Dzięki indywidualnemu podejściu i dbałości o
                 bezpieczeństwo, Konrad sprawia, że każdy, niezależnie od poziomu
                 zaawansowania, czuje się pewnie i jest zmotywowany do działania.
+              </p>
+            </div>
+          </div>
+
+          <div class="trainers-wrapper">
+            <div class="trainers-wrapper-img">
+              <img
+                src="img/Krzysztof-Glowacki.webp"
+                alt=""
+                class="trainers-img"
+              />
+            </div>
+
+            <div class="trainers-description-box">
+              <h3 class="h3 dark">Trener Krzysztof</h3>
+              <p class="trainers-description">
+                Krzysztof ,,Główka” Głowacki były Dwukrotny Mistrz Świata World
+                Boxing Organization w wadze junior ciężkiej. Były młodzieżowy
+                Mistrz Polski oraz medalista, Mistrzostw Polski Seniorów w
+                kategorii super ciężkiej. Obecnie zawodnik MMA zakontraktowany w
+                federacji KSW, w swoim debiucie wygrał przez nokaut po półtorej
+                minuty rundy pierwszej. Spektakularny nokaut został nominowany w
+                rankingu świtowym do nokautu roku.
+              </p>
+
+              <div class="trainers-list-wrapper">
+                <ul class="trainers-list">
+                  <h5 class="h5 trainer-h5">Boks:</h5>
+                  <li class="trainer-item">Liczba walk 36</li>
+                  <li class="trainer-item">Zwycięstwa 32</li>
+                  <li class="trainer-item">Przez nokauty 20</li>
+                  <li class="trainer-item">Porażki 4</li>
+                  <li class="trainer-item">MMA 1-0</li>
+                </ul>
+
+                <ul class="trainers-list">
+                  <h5 class="h5 trainer-h5">MMA:</h5>
+                  <li class="trainer-item">Liczba walk 1</li>
+                  <li class="trainer-item">Zwycięstwa 1</li>
+                </ul>
+              </div>
+
+              <p class="trainers-description">
+                Aktualnie, jako trener, z powodzeniem dzieli się swoją pasją i
+                doświadczeniem z zawodnikami w każdym wieku i na różnych
+                poziomach zaawansowania. Jako mistrz doskonale rozumie, jak
+                ważne są zarówno technika, jak i psychologiczne przygotowanie do
+                walki. W swojej pracy kładzie szczególny nacisk na indywidualne
+                podejście do każdego zawodnika, dostosowując treningi do jego
+                potrzeb i możliwości. Serdecznie zapraszamy do trenowania pod
+                okiem Krzysztofa Głowackiego – trenera, który z pasją i
+                zaangażowaniem pomoże Ci osiągnąć Twoje sportowe cele.
               </p>
             </div>
           </div>
@@ -1077,7 +1167,7 @@
 
         <div class="center-footer">
           <ul class="address-list">
-            <li class="address-item">ul. Jagielońska 13</li>
+            <li class="address-item">ul. Jagiellońska 13</li>
             <li class="address-item">05-120 Legionowo</li>
             <li class="address-item">tel. 794-002-373</li>
             <li class="address-item">stowarzyszenie.aks@gmail.com</li>
@@ -1094,14 +1184,14 @@
             <li class="footer-link-item">
               <a href="" class="footer-link">Grafik zajęć</a>
             </li>
-            <li class="footer-link-item">
-              <a href="" class="footer-link">Dokumenty</a>
+            <li class="footer-link-item docLink">
+              <a href="#" class="footer-link docLink">Dokumenty</a>
             </li>
             <li class="footer-link-item">
               <a href="#section2" class="footer-link">Kontakt</a>
             </li>
-            <li class="footer-link-item pricingLink navigation-list-item">
-              <a href="" class="footer-link pricingLink">Cennik</a>
+            <li class="footer-link-item pricingLink">
+              <a href="#" class="footer-link pricingLink">Cennik</a>
             </li>
           </ul>
 
@@ -1130,6 +1220,43 @@
         </div>
       </footer>
     </div>
-    <script src="script.js"></script>
+
+    <script>
+      ((g) => {
+        var h,
+          a,
+          k,
+          p = "The Google Maps JavaScript API",
+          c = "google",
+          l = "importLibrary",
+          q = "__ib__",
+          m = document,
+          b = window;
+        b = b[c] || (b[c] = {});
+        var d = b.maps || (b.maps = {}),
+          r = new Set(),
+          e = new URLSearchParams(),
+          u = () =>
+            h ||
+            (h = new Promise(async (f, n) => {
+              await (a = m.createElement("script"));
+              e.set("libraries", [...r] + "");
+              for (k in g)
+                e.set(
+                  k.replace(/[A-Z]/g, (t) => "_" + t[0].toLowerCase()),
+                  g[k]
+                );
+              e.set("callback", c + ".maps." + q);
+              a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+              d[q] = f;
+              a.onerror = () => (h = n(Error(p + " could not load.")));
+              a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+              m.head.append(a);
+            }));
+        d[l]
+          ? console.warn(p + " only loads once. Ignoring:", g)
+          : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
+      })({ key: "AIzaSyDbHyaSxeW1OH9ZKhQRezya8bW2O744S1E", v: "weekly" });
+    </script>
   </body>
 </html>

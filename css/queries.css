@@ -8,17 +8,23 @@
   }
 
   .trainers-wrapper-img {
-    width: 25%;
+    /* width: 25%; */
   }
 
   .trainers-description-box {
-    width: 75%;
+    /* width: 100% */
     padding: 2rem 1.2rem 0 4.4rem;
   }
 
   .trainers-description {
-    font-size: 1.8rem;
+    font-size: 2rem;
     padding: 2.4rem 0;
+  }
+
+  .trainers-list {
+    font-size: 2rem;
+    padding: 0;
+    gap: 1.2rem;
   }
 
   .break {
@@ -32,11 +38,28 @@
 }
 
 @media (max-width: 1506px) {
+  .h3 {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+  }
   .mb-m {
     padding-bottom: 1.4rem;
   }
+
   .trainers-wrapper-img {
-    width: 27%;
+    /* width: 27%; */
+  }
+
+  .docsPopup {
+    padding: 15rem;
+  }
+
+  .docsWrapper {
+    width: 60%;
+  }
+
+  .trainers-img {
+    width: 450px;
   }
 
   .about-text-box {
@@ -44,7 +67,7 @@
   }
 
   .trainers-description-box {
-    width: 73%;
+    /* width: 73%; */
     padding: 0;
     padding-top: 1.2vw;
   }
@@ -53,6 +76,20 @@
     font-size: 1.6rem;
     padding: 1rem;
     padding-left: 3.2rem;
+  }
+
+  .trainers-list-wrapper {
+    padding: 1rem 1.2rem 0 3.2rem;
+  }
+
+  .trainers-list {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .trainer-h5 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
   }
 
   .break {
@@ -122,11 +159,16 @@
   .popup-descripion-text {
     margin-bottom: 2rem;
   }
+
+  .trainers-description-box {
+    /* height: 600px; */
+  }
 }
 
 @media (max-width: 1300px) {
   .h3 {
-    font-size: 3rem;
+    font-size: 2.6rem;
+    margin-bottom: 1.2rem;
   }
 
   .pricing-list {
@@ -147,19 +189,28 @@
   }
 
   .trainers-wrapper-img {
-    width: 40%;
+    /* width: 40%; */
   }
 
   .trainers-description-box {
-    width: 70%;
+    /* width: 70%; */
   }
 
   .trainers-description {
+    line-height: 1.3;
     font-size: 1.7rem;
-    padding: 2rem;
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: 0.1rem;
+  }
+
+  .trainers-img {
+    width: 500px;
+  }
+
+  .trainers-list-wrapper {
+    padding: 1rem 2rem;
+  }
+
+  .trainers-description {
+    padding: 0 2rem;
   }
 
   .break {
@@ -324,6 +375,10 @@
     display: flex;
   }
 
+  .docsWrapper {
+    width: 80%;
+  }
+
   .navigation-list {
     flex-direction: column;
     font-weight: 500;
@@ -371,12 +426,21 @@
   }
 
   .trainers-wrapper-img {
-    width: 40%;
+    width: 100%;
     border-radius: 0 0 4.5rem 4.5rem;
   }
 
+  .trainers-img {
+    width: 100%;
+  }
+
   .trainers-description-box {
-    width: 60%;
+    /* width: 60%; */
+    height: 100%;
+  }
+
+  .trainers-list-wrapper {
+    padding: 0 3.6rem;
   }
 
   .trainers-img {
@@ -468,7 +532,7 @@
 
 @media (max-width: 1024px) {
   .pricing-box {
-    padding: 10rem 0;
+    padding: 2rem 0;
   }
 
   .pricing-list {
@@ -516,31 +580,45 @@
 
   .h4 {
     width: 90%;
-    font-size: 1.8remgi;
+    font-size: 1.8rem;
   }
 
-  .h5 {
-    text-align: center;
-    padding: 0.3rem;
-  }
-
-  .pricing-list {
-    height: 35%;
+  .pricing-box {
+    padding: 3rem 0;
+    justify-content: space-between;
   }
 
   .pricing-list {
+    height: 100%;
+  }
+
+  .docsWrapper {
     width: 90%;
-    gap: 0.8rem;
   }
 
+  .docsDescription {
+    font-size: 1.6rem;
+  }
 
-  .pricingCloseBtn{
+  .docsLink:visited,
+  .docsLink:link {
+    margin: 1rem 0;
+    font-size: 1.4rem;
+  }
+
+  .pricingCloseBtn {
+    top: 1%;
     right: 0;
   }
 
-  .pricing-item{
-    font-size: 1.6rem;
+  .pricing-item {
+    font-size: 1.4rem;
   }
+
+  .pricing-name {
+    font-size: 1.4rem;
+  }
+
   .pricing-item {
     display: flex;
     flex-direction: column;
@@ -564,7 +642,18 @@
 
   .about-text-box {
     background-size: 135%;
-    /* background-position: top; */
+  }
+
+  .popup-descripion-text {
+    font-size: 1.6rem;
+  }
+
+  .group-name {
+    font-size: 1.6rem;
+  }
+
+  .thing-name {
+    font-size: 1.6rem;
   }
 
   .h1 {
@@ -579,16 +668,13 @@
   .h3 {
     font-size: 2.4rem;
   }
+
   .popup-h3 {
     font-size: 2.2rem;
   }
 
   .sports-section-item {
     font-size: 1.6rem;
-  }
-
-  .group-name {
-    font-size: 2rem;
   }
 
   .close-popup {
@@ -633,7 +719,7 @@
 
   .trainers-description {
     font-size: 1.6rem;
-    padding: 1rem 1rem 3.4rem 1rem;
+    padding: 1rem 1rem 2rem 1rem;
   }
 
   .break {
@@ -668,5 +754,9 @@
 
   .partner-logo-text {
     font-size: 1.2rem;
+  }
+
+  .trainers-list-wrapper {
+    padding: 0 1rem;
   }
 }

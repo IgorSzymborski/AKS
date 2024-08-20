@@ -12,20 +12,24 @@
 }
 
 .trainers-wrapper-img {
-  width: 28%;
+  /* width: 28%; */
   display: flex;
   align-items: stretch;
 }
 
 .trainers-img {
-  width: 100%;
+  width: 500px;
   border-radius: 2.4rem 0;
   box-shadow: 0 0.5rem 2rem 0 hsla(0, 0%, 0%, 0.2);
 }
 
 .trainers-description-box {
-  width: 72%;
+  /* width: 50%; */
   padding: 2rem 1.2rem 0 4.4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .trainers-description {
@@ -40,4 +44,26 @@
 
 .break {
   margin-bottom: 5rem;
+}
+
+.trainers-list-wrapper {
+  display: flex;
+  justify-content: stretch;
+  gap: 3.6rem;
+  width: 100%;
+}
+
+.trainers-list {
+  padding: 1rem 1.2rem 0 2.4rem;
+  font-size: 2.2rem;
+  font-weight: 500;
+  list-style: none;
+}
+
+.trainer-h5 {
+  color: #101415;
+  text-align: left;
+  /* padding: 2rem 1.2rem 0 2.4rem; */
+  padding: 0;
+  margin-bottom: 1.2rem;
 }

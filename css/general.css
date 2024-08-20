@@ -33,8 +33,10 @@ body {
   background-color: #101415;
 }
 
-.container{
+.container {
   position: relative;
+  /* overflow: scroll;
+  max-height: 100vh; */
 }
 
 .btn {
@@ -55,14 +57,14 @@ body {
 }
 
 .h1 {
-  font-size: 5.2rem;
+  font-size: 4.8rem;
   color: #ced4da;
   text-transform: uppercase;
   text-align: center;
 }
 
 .h2 {
-  font-size: 4.4rem;
+  font-size: 3.6rem;
   color: #ced4da;
   text-transform: uppercase;
   text-align: center;
@@ -70,7 +72,7 @@ body {
 }
 
 .h3 {
-  font-size: 3.6rem;
+  font-size: 3rem;
   color: #e5e5e5 !important;
   text-transform: uppercase;
   text-align: center;
@@ -79,7 +81,7 @@ body {
 }
 
 .h4 {
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   color: #e5e5e5 !important;
   text-transform: uppercase;
   text-align: left;

@@ -11,6 +11,7 @@
   /* background-color: rgba(102, 102, 102, 0.035); */
   /* z-index: 99999999999999; */
   /* border-bottom: 2px solid #e5e5e5; */
+  /* position: relative; */
 }
 
 .header-logo-box {
@@ -145,7 +146,8 @@
   position: absolute;
   background-color: #101415;
   width: 100%;
-  height: 45%;
+  /* height: 55%;
+  height: 100vh; */
   height: 100vh;
   top: 0;
   bottom: 0;
@@ -156,8 +158,8 @@
   flex-direction: column;
   align-items: center;
 
-  justify-content: flex-start;
-  padding: 10rem 0;
+  justify-content: space-evenly;
+  /* padding: 10rem 0; */
 
   z-index: 222222222222222222222222;
 }
@@ -182,7 +184,8 @@
   font-weight: 700;
 }
 
-.pricingCloseBtn {
+.pricingCloseBtn,
+.docsCloseButton {
   position: absolute;
   top: 5%;
   right: 5%;
@@ -191,10 +194,17 @@
   font-size: 3rem;
 }
 
+.docsCloseButton {
+  position: fixed;
+}
 .h4 {
   text-align: left;
   display: inline-block;
-  width: 50%;
+  /* width: 50%; */
+}
+
+.center {
+  text-align: center;
 }
 
 .hidden {
@@ -207,4 +217,52 @@
 
 .overflowH {
   overflow: hidden;
+}
+
+.docsPopup {
+  position: absolute;
+  background-color: #101415;
+  z-index: 2222222222222222;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 20rem;
+}
+
+.docsWrapper {
+  position: fixed;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 40%;
+}
+
+.docsDescription {
+  font-size: 1.78rem;
+  color: #ced4da;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.docsLink:visited,
+.docsLink:link {
+  font-size: 1.8rem;
+  color: #ced4da;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: #3b5998;
+  line-height: 1.2;
+}
+
+.docsLink:hover {
+  transform: scale(1.1);
+  color: #466ab6;
 }

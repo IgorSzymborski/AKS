@@ -8,10 +8,13 @@ const nav = document.querySelector(".navigation");
 const contactBox = document.querySelector(".header-contact-box");
 const closeMenuBtn = document.querySelectorAll(".navigation-list-item");
 const navLink = document.querySelector(".nav-link");
-const pricingLink = document.querySelector(".pricingLink");
+const pricingLink = document.querySelectorAll(".pricingLink");
 const pricingBox = document.querySelector(".pricing-box");
 const pricingCloseBtn = document.querySelector(".pricingCloseBtn");
 const overflowH = document.querySelector(".overflow-hidden");
+const docsLink = document.querySelectorAll(".docLink");
+const docsPopup = document.querySelector(".docsPopup");
+const docsCloseButton = document.querySelector(".docsCloseButton");
 
 const togglePopup = (button) => {
   popups.forEach((popup) => {
@@ -52,16 +55,24 @@ closeMenuBtn.forEach((button) => {
       document.body.style.overflow = "hidden";
     }
 
-    // document.body.classList.remove(".overflowH");
+    document.body.classList.remove(".overflowH");
   });
 });
 
-pricingLink.addEventListener("click", function () {
-  pricingBox.classList.remove("hidden");
+pricingLink.forEach((button) => {
+  button.addEventListener("click", function () {
+    pricingBox.classList.remove("hidden");
 
-  document.body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+  });
+});
 
-  console.log(document.body.style.overflow);
+docsLink.forEach((button) => {
+  button.addEventListener("click", () => {
+    docsPopup.classList.remove("hidden");
+
+    document.body.style.overflow = "hidden";
+  });
 });
 
 pricingCloseBtn.addEventListener("click", () => {
@@ -69,18 +80,23 @@ pricingCloseBtn.addEventListener("click", () => {
   document.body.style.overflow = "";
 });
 
-const map = L.map("map").setView([52.39880766106131, 20.931744687666964], 17);
+docsCloseButton.addEventListener("click", () => {
+  docsPopup.classList.toggle("hidden");
+  document.body.style.overflow = "";
+});
 
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  maxZoom: 20,
-}).addTo(map);
+// const map = L.map("map").setView([52.39880766106131, 20.931744687666964], 17);
 
-L.marker([52.39880766106131, 20.931744687666964])
-  .addTo(map)
-  .bindPopup("Akademia Kształcenia Sportowego")
-  .openPopup();
+// L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+//   maxZoom: 20,
+// }).addTo(map);
 
-///
+// L.marker([52.39880766106131, 20.931744687666964])
+//   .addTo(map)
+//   .bindPopup("Akademia Kształcenia Sportowego")
+//   .openPopup();
+
+// ///
 
 const sendMail = () => {
   const params = {
@@ -106,10 +122,33 @@ hamburgerButton.addEventListener("click", () => {
   contactBox.classList.toggle("hiddenn");
   hamburgerButton.style.position = "fixed";
   document.body.style.overflow = "hidden";
+
+  if (!hamburgerButton.classList.contains("active")) {
+    hamburgerButton.style.position = "static";
+
+    document.body.style.overflowY = "scroll";
+  }
 });
 
-if (!hamburgerButton.classList.contains("active")) {
-  hamburgerButton.style.position = "static";
-  document.body.style.overflow = "";
-} else {
+let map;
+
+async function initMap() {
+  const position = { lat: 52.39880766106131, lng: 20.931744687666964 };
+
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+  map = new Map(document.getElementById("map"), {
+    zoom: 15,
+    center: position,
+    mapId: "DEMO_MAP_ID",
+  });
+
+  const marker = new AdvancedMarkerElement({
+    map: map,
+    position: position,
+    title: "Uluru",
+  });
 }
+
+initMap();

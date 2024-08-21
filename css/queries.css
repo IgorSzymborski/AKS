@@ -35,6 +35,19 @@
   .contactLink:link {
     font-size: 1.7rem;
   }
+
+  .scheduleImg {
+    width: 60%;
+  }
+
+  .scheduleCloseLink {
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    background: transparent;
+    color: #ced4da !important;
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 1506px) {
@@ -162,6 +175,19 @@
 
   .trainers-description-box {
     /* height: 600px; */
+  }
+
+  .scheduleImg {
+    width: 70%;
+  }
+
+  .scheduleCloseLink {
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    background: transparent;
+    color: #ced4da !important;
+    font-size: 3rem !important;
   }
 }
 
@@ -317,6 +343,15 @@
 
   .thing-name {
     font-size: 2rem;
+  }
+
+  .scheduleImg {
+    width: 80%;
+  }
+
+  .scheduleCloseLink {
+    top: 0%;
+    right: 0%;
   }
 }
 
@@ -527,6 +562,15 @@
   .partners-box {
     padding-top: 2rem;
     padding-bottom: 4rem;
+  }
+
+  .scheduleImg {
+    width: 90%;
+  }
+
+  .scheduleCloseLink {
+    top: 0%;
+    right: 0%;
   }
 }
 
@@ -758,5 +802,14 @@
 
   .trainers-list-wrapper {
     padding: 0 1rem;
+  }
+
+  .scheduleImg {
+    width: 100%;
+  }
+
+  .scheduleCloseLink {
+    top: 0%;
+    right: 0%;
   }
 }

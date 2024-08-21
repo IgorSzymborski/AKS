@@ -15,6 +15,11 @@ const overflowH = document.querySelector(".overflow-hidden");
 const docsLink = document.querySelectorAll(".docLink");
 const docsPopup = document.querySelector(".docsPopup");
 const docsCloseButton = document.querySelector(".docsCloseButton");
+const scheduleLink = document.querySelectorAll(".scheduleLink");
+const schedulePopup = document.querySelector(".schedulePopup");
+const scheduleCloseLink = document.querySelector(".scheduleCloseLink");
+
+console.log(schedulePopup);
 
 const togglePopup = (button) => {
   popups.forEach((popup) => {
@@ -75,6 +80,13 @@ docsLink.forEach((button) => {
   });
 });
 
+scheduleLink.forEach((button) => {
+  button.addEventListener("click", () => {
+    schedulePopup.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+  });
+});
+
 pricingCloseBtn.addEventListener("click", () => {
   pricingBox.classList.toggle("hidden");
   document.body.style.overflow = "";
@@ -85,18 +97,10 @@ docsCloseButton.addEventListener("click", () => {
   document.body.style.overflow = "";
 });
 
-// const map = L.map("map").setView([52.39880766106131, 20.931744687666964], 17);
-
-// L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-//   maxZoom: 20,
-// }).addTo(map);
-
-// L.marker([52.39880766106131, 20.931744687666964])
-//   .addTo(map)
-//   .bindPopup("Akademia Kształcenia Sportowego")
-//   .openPopup();
-
-// ///
+scheduleCloseLink.addEventListener("click", () => {
+  schedulePopup.classList.toggle("hidden");
+  document.body.style.overflow = "";
+});
 
 const sendMail = () => {
   const params = {

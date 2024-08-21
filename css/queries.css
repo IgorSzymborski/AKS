@@ -804,6 +804,11 @@
     padding: 0 1rem;
   }
 
+  .schedulePopup {
+    align-items: flex-start;
+    padding: 10rem 1rem;
+  }
+
   .scheduleImg {
     width: 100%;
   }

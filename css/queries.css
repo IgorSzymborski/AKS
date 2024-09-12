@@ -615,6 +615,10 @@
   .break {
     margin-bottom: 2rem;
   }
+
+  .text-wrapper {
+    border-radius: 0.3rem;
+  }
 }
 
 @media (max-width: 550px) {

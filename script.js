@@ -18,8 +18,13 @@ const docsCloseButton = document.querySelector(".docsCloseButton");
 const scheduleLink = document.querySelectorAll(".scheduleLink");
 const schedulePopup = document.querySelector(".schedulePopup");
 const scheduleCloseLink = document.querySelector(".scheduleCloseLink");
+const galleryImg = document.querySelectorAll(".gallery-img-box");
+const bigGallery = document.querySelector(".big-gallery");
+const closeGallery = document.querySelector(".closeGallery");
+const bigGalleryImg = document.querySelector(".big-gallery-img");
 
-console.log(schedulePopup);
+const leftArrow = document.querySelector(".leftArrow");
+const rightArrow = document.querySelector(".rightArrow");
 
 const togglePopup = (button) => {
   popups.forEach((popup) => {
@@ -100,6 +105,72 @@ docsCloseButton.addEventListener("click", () => {
 scheduleCloseLink.addEventListener("click", () => {
   schedulePopup.classList.toggle("hidden");
   document.body.style.overflow = "";
+});
+
+galleryImg.forEach((button) => {
+  button.addEventListener("click", () => {
+    if (window.innerWidth > 550) {
+      console.log("Funkcja działa na ekranach szerszych niż 550px");
+      bigGallery.classList.toggle("hidden");
+      bigGallery.style.display = "flex";
+      document.body.style.overflow = "hidden";
+      console.log("test");
+    } else {
+      return;
+    }
+  });
+});
+
+closeGallery.addEventListener("click", () => {
+  bigGallery.classList.toggle("hidden");
+  document.body.style.overflow = "";
+  bigGallery.style.display = "";
+});
+
+let index = 1;
+
+const showSlide = (index) => {
+  bigGalleryImg.src = `/img/galleryCarousel${index}.webp`;
+};
+
+const prevSlide = (params) => {};
+
+leftArrow.addEventListener("click", () => {
+  if (index === 0 || index === 1) {
+    index = 6;
+  } else {
+    index--;
+  }
+  showSlide(index);
+});
+
+rightArrow.addEventListener("click", () => {
+  if (index === 6) {
+    index = 1;
+  } else {
+    index++;
+  }
+  showSlide(index);
+});
+showSlide(index);
+
+const buttons = document.querySelectorAll("[data-carousel-button]");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const offset = button.dataset.carouselButton === "next" ? 1 : -1;
+    const slides = button
+      .closest("[data-carousel]")
+      .querySelector("[data-slides]");
+
+    const activeSlide = slides.querySelector("[data-active]");
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+    if (newIndex < 0) newIndex = slides.children.length - 1;
+    if (newIndex >= slides.children.length) newIndex = 0;
+
+    slides.children[newIndex].dataset.active = true;
+    delete activeSlide.dataset.active;
+  });
 });
 
 const sendMail = () => {

@@ -204,26 +204,3 @@ hamburgerButton.addEventListener("click", () => {
     document.body.style.overflowY = "scroll";
   }
 });
-
-let map;
-
-async function initMap() {
-  const position = { lat: 52.39880766106131, lng: 20.931744687666964 };
-
-  const { Map } = await google.maps.importLibrary("maps");
-  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-
-  map = new Map(document.getElementById("map"), {
-    zoom: 16,
-    center: position,
-    mapId: "DEMO_MAP_ID",
-  });
-
-  const marker = new AdvancedMarkerElement({
-    map: map,
-    position: position,
-    title: "Uluru",
-  });
-}
-
-initMap();
